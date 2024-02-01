@@ -4,5 +4,12 @@
   <test thread-count="5" name="Test">
 	  <parameter name="Browser" value="Chrome"></parameter>
 	    <parameter name="URL" value="amazon.in"></parameter>
+	    <classes>
+			<class name="TestCases.QALegendTestCases">
+				<methods>
+					<include name="loginCRM"></include>
+				</methods>
+			</class>
+		</classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
