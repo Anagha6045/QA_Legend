@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class BaseClass 
 {
 	public WebDriver driver;
+	public String excelFilePath="//src//main//java//TestData//TestData_Excel.xlsx";
 	@SuppressWarnings("deprecation")
 	public WebDriver browserIntialization(String browserName) throws Exception
 	{
@@ -30,7 +31,7 @@ public class BaseClass
 		{
 			throw new Exception("Invalid Name Exception");
 		}
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		return driver;
 		
 	}
