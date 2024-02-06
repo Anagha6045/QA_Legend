@@ -3,6 +3,7 @@ package Utilities;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -38,5 +39,10 @@ public class WaitUtility
   {
   	WebDriverWait wait= new WebDriverWait(driver, timeinseconds);
   	wait.until(ExpectedConditions.elementToBeSelected(element));
+  }
+  public static void waitTillvisibilityOfElementLocated(WebDriver driver,By Byelement, Duration timeinseconds)
+  {
+  	WebDriverWait wait= new WebDriverWait(driver, timeinseconds);
+  wait.until(ExpectedConditions.visibilityOfElementLocated(Byelement));
   }
 }

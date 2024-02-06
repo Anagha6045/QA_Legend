@@ -5,13 +5,12 @@
     <listener class-name="TestCases.Listeners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <parameter name="URL" value="amazon.in"/>
     <parameter name="Browser" value="Chrome"/>
     <classes>
       <class name="TestCases.QALegendTestCases">
         <methods>
           <include name="initialization"/>
-          <include name="downloadClientReport"/>
+          <include name="statusOfProjects"/>
         </methods>
       </class> <!-- TestCases.QALegendTestCases -->
     </classes>

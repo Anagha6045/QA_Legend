@@ -1,11 +1,17 @@
 package AutomationCore;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.google.common.io.Files;
 
 public class BaseClass 
 {
@@ -35,5 +41,17 @@ public class BaseClass
 		return driver;
 		
 	}
+	
+	
+	  public String getScreenShotPath(String testCaseName, WebDriver driver) throws
+	  IOException 
+	  { //driver n screen shot edukkan kazhiyaa m m m 
+      TakesScreenshot ts = (TakesScreenshot)driver; 
+	  File source =ts.getScreenshotAs(OutputType.FILE); String destinationFile =
+	  System.getProperty("user.dir"+"\\test-output\\"+ testCaseName+".png");
+	  Files.copy(source,new File(destinationFile)); return destinationFile;
+	  
+	  }
+	 
 	
 }

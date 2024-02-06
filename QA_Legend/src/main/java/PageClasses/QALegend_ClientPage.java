@@ -134,7 +134,7 @@ public class QALegend_ClientPage
 	public void inputClientGroups(String client)
 	 {
             PageUtility.scrollThePage(inputField_ClientGroups, driver);
-			 PageUtility.enterText(inputField_ClientGroups,client);
+			PageUtility.enterText(inputField_ClientGroups,client);
     }
 	public void button_Save()
 	 {

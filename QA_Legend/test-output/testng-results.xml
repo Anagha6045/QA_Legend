@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-05T08:41:40 IST" name="Suite" finished-at="2024-02-05T08:42:04 IST" duration-ms="24441">
+  <suite started-at="2024-02-06T07:57:15 IST" name="Suite" finished-at="2024-02-06T07:57:23 IST" duration-ms="8531">
     <groups>
     </groups>
-    <test started-at="2024-02-05T08:41:40 IST" name="Test" finished-at="2024-02-05T08:42:04 IST" duration-ms="24441">
+    <test started-at="2024-02-06T07:57:15 IST" name="Test" finished-at="2024-02-06T07:57:23 IST" duration-ms="8531">
       <class name="TestCases.QALegendTestCases">
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6fd83fc1]" started-at="2024-02-05T08:41:40 IST" name="initialization" finished-at="2024-02-05T08:41:45 IST" duration-ms="5303" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@2ed2d9cb]" started-at="2024-02-06T07:57:15 IST" name="initialization" finished-at="2024-02-06T07:57:18 IST" duration-ms="3754" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,44 +18,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="addClient()[pri:0, instance:TestCases.QALegendTestCases@6fd83fc1]" started-at="2024-02-05T08:41:45 IST" name="addClient" finished-at="2024-02-05T08:41:55 IST" duration-ms="9713" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addClient -->
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6fd83fc1]" started-at="2024-02-05T08:41:55 IST" name="initialization" finished-at="2024-02-05T08:42:01 IST" duration-ms="6186" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialization -->
-        <test-method signature="downloadClientReport()[pri:0, instance:TestCases.QALegendTestCases@6fd83fc1]" started-at="2024-02-05T08:42:01 IST" name="downloadClientReport" finished-at="2024-02-05T08:42:04 IST" duration-ms="3185" status="FAIL">
+        <test-method signature="statusOfProjects()[pri:9, instance:TestCases.QALegendTestCases@2ed2d9cb]" started-at="2024-02-06T07:57:18 IST" name="statusOfProjects" finished-at="2024-02-06T07:57:23 IST" duration-ms="4721" status="FAIL">
           <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[element click intercepted: Element <span>...</span> is not clickable at point (1207, 155). Other element would receive the click: <div id="pre-loader" style="opacity: 1;">...</div>
+              <![CDATA[element click intercepted: Element <button class="btn btn-default dropdown-toggle " type="button" data-toggle="dropdown" aria-expanded="true">...</button> is not clickable at point (1127, 156). Other element would receive the click: <div class="modal in" id="ajaxModal" tabindex="-1" role="dialog" aria-labelledby="ajaxModal" aria-hidden="true" style="display: block;">...</div>
   (Session info: chrome=121.0.6167.140)
 Build info: version: '4.16.0', revision: '15400459dd*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [406b5d913c747bf07ab8ec41e6a29f49, clickElement {id=C5E0BA962DB5230221FCB8111EFA91D0_element_88}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\anagh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65239}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65239/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (406b5d913c747bf07ab8ec41e6a29f49)] -> xpath: //span[text()='Excel']]
-Session ID: 406b5d913c747bf07ab8ec41e6a29f49]]>
+Command: [58c43bfac2eb7a351ed7f88ad7402382, clickElement {id=77127AF3D0B783C1D6AB1CD7343257F0_element_193}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\anagh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50530}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50530/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (58c43bfac2eb7a351ed7f88ad7402382)] -> xpath: //button[text()='Status ']]
+Session ID: 58c43bfac2eb7a351ed7f88ad7402382]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span>...</span> is not clickable at point (1207, 155). Other element would receive the click: <div id="pre-loader" style="opacity: 1;">...</div>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="btn btn-default dropdown-toggle " type="button" data-toggle="dropdown" aria-expanded="true">...</button> is not clickable at point (1127, 156). Other element would receive the click: <div class="modal in" id="ajaxModal" tabindex="-1" role="dialog" aria-labelledby="ajaxModal" aria-hidden="true" style="display: block;">...</div>
   (Session info: chrome=121.0.6167.140)
 Build info: version: '4.16.0', revision: '15400459dd*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [406b5d913c747bf07ab8ec41e6a29f49, clickElement {id=C5E0BA962DB5230221FCB8111EFA91D0_element_88}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\anagh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65239}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65239/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (406b5d913c747bf07ab8ec41e6a29f49)] -> xpath: //span[text()='Excel']]
-Session ID: 406b5d913c747bf07ab8ec41e6a29f49
+Command: [58c43bfac2eb7a351ed7f88ad7402382, clickElement {id=77127AF3D0B783C1D6AB1CD7343257F0_element_193}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\anagh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50530}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50530/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (58c43bfac2eb7a351ed7f88ad7402382)] -> xpath: //button[text()='Status ']]
+Session ID: 58c43bfac2eb7a351ed7f88ad7402382
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -72,9 +57,9 @@ at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethod
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-at Utilities.PageUtility.clickOnElement(PageUtility.java:73)
-at PageClasses.QALegend_ClientPage.downloadExcelReport(QALegend_ClientPage.java:156)
-at TestCases.QALegendTestCases.downloadClientReport(QALegendTestCases.java:145)
+at Utilities.PageUtility.clickOnElement(PageUtility.java:78)
+at PageClasses.QALegend_ProjectPage.filterByOpenStatus(QALegend_ProjectPage.java:119)
+at TestCases.QALegendTestCases.statusOfProjects(QALegendTestCases.java:253)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -106,7 +91,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- downloadClientReport -->
+        </test-method> <!-- statusOfProjects -->
       </class> <!-- TestCases.QALegendTestCases -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

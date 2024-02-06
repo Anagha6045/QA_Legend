@@ -18,31 +18,44 @@ WebElement userProfileName;
 WebElement signOutUser;
 
 @FindBy(xpath = "//span[text()='Events']")
-WebElement EventsButton;
+WebElement eventsButton;
 
 @FindBy(xpath = "//span[text()='Notes']")
-WebElement NotesButton;
+WebElement notesButton;
 
 @FindBy(xpath = "//span[text()='Messages']")
-WebElement MessagesButton;
+WebElement messagesButton;
 
 @FindBy(xpath = "//span[text()='Clients']")
 WebElement ClientsButton;
 
 @FindBy(xpath = "//span[text()='Projects']")
-WebElement ProjectsButton;
+WebElement projectsButton;
+
+@FindBy(xpath="//span[text()='All Projects']")
+WebElement allProjectsButton;
 
 @FindBy(xpath = "//span[text()='Estimates']")
-WebElement EstimatesButton;
+WebElement estimatesButton;
 
 @FindBy(xpath = "//span[text()='Invoices']")
-WebElement InvoicesButton;
+WebElement invoicesButton;
 
 @FindBy(xpath = "//span[text()='Tickets']")
-WebElement TicketsButton;
+WebElement ticketsButton;
 
 @FindBy(xpath = "//span[text()='Team members']")
-WebElement TeamMemberButton;
+WebElement teamMemberButton;
+
+@FindBy (xpath = "//span[text()='Tickets']//following-sibling::span")
+WebElement noOfTicketsDisplayed;
+
+@FindBy(xpath = "//div[@id='ticket-status-flotchart']")
+WebElement locateTicketsPieChart;
+
+@FindBy(xpath ="//span[text()='Leave']")
+WebElement leaveButton;
+
 
 public QALegend_HomePage(WebDriver driver) 
 {
@@ -67,15 +80,44 @@ return userName;
 }
 public void clickOnEvents() 
 {
-	PageUtility.clickOnElement(EventsButton);
+	PageUtility.clickOnElement(eventsButton);
 }
 
 public void clickOnClients() 
 {
 	PageUtility.clickOnElement(ClientsButton);
 }
+public void clickOnMessage()
+{
+	PageUtility.clickOnElement(messagesButton);
+}
+public void clickOnProjects()
+{
+	PageUtility.clickOnElement(projectsButton);
+}
+public void clickOnAllProjects()
+{
+	PageUtility.clickOnElement(allProjectsButton);
+}
 public void clickOnTeamMembers() 
 {
-	PageUtility.clickOnElement(TeamMemberButton);
+	PageUtility.clickOnElement(teamMemberButton);
+}
+
+public String noOfTickets()
+{
+	return noOfTicketsDisplayed.getText();
+}
+public void clickOnTickets()
+{
+	PageUtility.clickOnElement(ticketsButton);
+}
+public void plotTicketsPieChart()
+{
+	PageUtility.scrollThePage(locateTicketsPieChart, driver);
+}
+public void clickOnLeave()
+{
+	PageUtility.clickOnElement(leaveButton);
 }
 }

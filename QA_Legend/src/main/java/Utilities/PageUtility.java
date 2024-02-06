@@ -1,6 +1,11 @@
 package Utilities;
 
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.Iterator;
 
@@ -298,8 +303,36 @@ public static void scrollToBottom(WebDriver driver, int percentScroll)
     	System.out.println(driver.switchTo().alert().getText());
     	return driver.switchTo().alert().getText();	
     }
-	
+	public static void fileUpload(WebElement element, String path) throws AWTException
+	{
+		StringSelection s=new StringSelection(path);
+		 
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s,null);
+		element.click();
+		 
+		Robot robot= new Robot();
+		robot.delay(3000);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_V);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		
+	}
     
-
+	public static void windowHandling(WebDriver driver)
+	{
+		driver.getWindowHandle();
+		Set<String> handles = driver.getWindowHandles();
+		Iterator<String> it = handles.iterator();
+		it.next();
+		String childtab = it.next();
+		driver.switchTo().window(childtab);
+	}
+    public static void switchWindowToParentTab(WebDriver driver)
+    {
+    	driver.switchTo().defaultContent();
+    }
 
 }
