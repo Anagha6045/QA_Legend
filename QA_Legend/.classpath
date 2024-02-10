@@ -37,5 +37,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="src" path="/QALegend_CRM"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

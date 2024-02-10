@@ -1,21 +1,78 @@
 package TestCases;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import org.testng.AssertJUnit;
 import java.awt.AWTException;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import AutomationCore.BaseClass;
+import PageClasses.QALegend_ClientPage;
+import PageClasses.QALegend_EventPage;
+import PageClasses.QALegend_HomePage;
+import PageClasses.QALegend_LeavePage;
+import PageClasses.QALegend_LoginPage;
+import PageClasses.QALegend_MessagePage;
+import PageClasses.QALegend_NotePage;
+import PageClasses.QALegend_ProjectPage;
+import PageClasses.QALegend_TicketsPage;
 import Utilities.ExcelUtility;
 import Utilities.FakerUtility;
 
 public class QALegendTestCases extends BaseClass
 {
-	public WebDriver driver;
+	 WebDriver driver;
 	
+	FileInputStream fis;
+     Properties prop;
+	 QALegend_LoginPage login_Page; 
+	 QALegend_HomePage home_Page;
+	 QALegend_EventPage event_Page;
+	 QALegend_ClientPage client_Page;
+	 QALegend_MessagePage message_page;
+	 QALegend_TicketsPage ticket_Page;
+	 QALegend_LeavePage leave_Page;
+	 QALegend_ProjectPage project_Page;
+	 QALegend_NotePage note_Page;
+	
+	SoftAssert softassertion;
+	
+	@BeforeMethod
+	@Parameters({"Browser"})
+	public void initialization(String browser) throws Exception
+	{
+    driver = browserIntialization(browser);
+    fis = new  FileInputStream("C:\\Users\\anagh\\git\\QA_Legend\\QA_Legend\\src\\main\\java\\TestData\\testdata.properties");
+    prop = new Properties();
+    prop.load(fis);
+    
+    driver.get(prop.getProperty("url"));
+    
+    
+    login_Page= new QALegend_LoginPage(driver);
+    home_Page = new QALegend_HomePage(driver);
+    event_Page = new QALegend_EventPage(driver);
+    client_Page= new QALegend_ClientPage(driver);
+    message_page= new QALegend_MessagePage(driver);
+    ticket_Page =new QALegend_TicketsPage(driver);
+    leave_Page= new QALegend_LeavePage(driver);
+    project_Page =new QALegend_ProjectPage(driver);
+    note_Page= new QALegend_NotePage(driver);
+  
+    
+    login_Page.enterUserName(prop.getProperty("username"));
+	login_Page.enterPassword(prop.getProperty("password"));
+	login_Page.loginButton();
+	}
 	
 	@Test(priority = 1)
 	public void loginCRM()
@@ -272,7 +329,12 @@ public class QALegendTestCases extends BaseClass
 			return login_data;
 		}
 
-	
+
+	  @AfterMethod 
+	  public void tearDown()
+	  {
+		  driver.quit();
+	  }
 }
 
 
