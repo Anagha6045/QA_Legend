@@ -1,5 +1,7 @@
 package PageClasses;
 
+import java.awt.AWTException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,8 +24,14 @@ public class QALegend_ProjectPage
 	@FindBy(xpath = "//label[@for='client_id']//following::b")
 	WebElement dropdownIcon;
 	
-	@FindBy(name = "client_id")
+	@FindBy(xpath  = "//select[@name='client_id']")
 	WebElement selectDropDown;
+	
+	@FindBy(xpath="//ul//li//div[@class='select2-result-label' and text()='APS Test Company ']")
+	WebElement inputSearch_Client;
+	
+	@FindBy(xpath="//div[text()='APS Test Company ']")
+	WebElement selectClient;
 	
 	@FindBy(id="description")
 	WebElement input_Description;
@@ -43,7 +51,7 @@ public class QALegend_ProjectPage
 	@FindBy(id="price")
 	WebElement inputField_Price;
 	
-	@FindBy(id="project_labels")
+	@FindBy(id ="//li//input")
 	WebElement inputField_ProjectLabels;
 	
 	@FindBy(xpath="//button[text()=' Save']")
@@ -57,12 +65,30 @@ public class QALegend_ProjectPage
 	
 	@FindBy(xpath="//li[text()='Open']")
 	WebElement statusOpen;
+	
 	@FindBy(xpath="//li[text()='Completed']")
 	WebElement statusCompleted;
+	
 	@FindBy(xpath="//li[text()='Hold']")
 	WebElement statusHold;
+	
 	@FindBy(xpath="//li[text()='Canceled']")
 	WebElement statusCanceled;
+	
+	@FindBy(xpath="//label//input[@placeholder='Search']")
+	WebElement searchProject;
+	
+	@FindBy(xpath = "//tbody//tr//td//a[text()='TestProject9843']")
+	WebElement resultSearchProject;
+	
+	@FindBy(xpath = "(//a[@title='Delete project'])[1]")
+	WebElement deleteProject;
+	
+	@FindBy(id="confirmDeleteButton")
+	WebElement deleteButton;
+	
+	@FindBy(xpath = "//button[text()=' Cancel']")
+	WebElement cancelDelete;
 
 	public QALegend_ProjectPage(WebDriver driver)
 	{
@@ -83,14 +109,16 @@ public class QALegend_ProjectPage
 	{
 		PageUtility.clickOnElement(dropdownIcon);
 	}
-	public void selectFromDropDown()
+	public void selectFromDropDown(String company) throws AWTException
 	{
-		Select select=new Select(selectDropDown);
-		select.selectByVisibleText("APS Test Company ");
+		PageUtility.clickByJavaScript(selectDropDown,driver);
+		PageUtility.scrollThePage(inputSearch_Client, driver);
+		PageUtility.clickByJavaScript(inputSearch_Client,driver);
+		PageUtility.robotSearchClient();
 	}
 	public void inputDescription(String description)
 	{
-		PageUtility.enterText(addProjectButton, description);
+		PageUtility.enterText(input_Description, description);
 	}
 	public void input_StartDate()
 	{
@@ -108,6 +136,8 @@ public class QALegend_ProjectPage
 	}
 	public void inputLabel(String label)
 	{
+		PageUtility.scrollToBottom(driver, -100);
+		PageUtility.clickByJavaScript(inputField_ProjectLabels,driver);
 		PageUtility.enterText(inputField_ProjectLabels, label);
 	}
 	public void saveProject()
@@ -116,30 +146,61 @@ public class QALegend_ProjectPage
 	}
 	public void filterByOpenStatus()
 	{
-		System.out.println(status.isEnabled());
-		System.out.println(status.isDisplayed());
-		System.out.println(status.isSelected());
+
 		WaitUtility.waitForAnElementToBeClickable(driver, status);
-		//PageUtility.clickOnElement(status);
-		PageUtility.clickOnElement(statusOpen);
+		PageUtility.clickByJavaScript(status,driver);
+		PageUtility.clickByJavaScript(statusOpen,driver);
 	}
+	
 	public void filterByCompletedStatus()
 	{
-		PageUtility.clickOnElement(status);
-		PageUtility.clickOnElement(statusOpen);
-		WaitUtility.waitForAnElementToBeClickable(driver, statusCompleted);
-		PageUtility.clickOnElement(statusCompleted);
+		PageUtility.clickByJavaScript(status,driver);
+		PageUtility.clickByJavaScript(statusOpen,driver);
+		//WaitUtility.waitForAnElementToBeClickable(driver, statusCompleted);
+		
+		PageUtility.clickByJavaScript(statusCompleted,driver);
 	}
 	public void filterByHoldStatus()
 	{
-		PageUtility.clickOnElement(status);
-		PageUtility.clickOnElement(statusCompleted);
-		PageUtility.clickOnElement(statusHold);
+		PageUtility.clickByJavaScript(status,driver);
+		PageUtility.clickByJavaScript(statusCompleted,driver);
+		PageUtility.clickByJavaScript(statusHold,driver);
 	}
 	public void filterByCanceledStatus()
 	{
-		PageUtility.clickOnElement(status);
-		PageUtility.clickOnElement(statusHold);
-		PageUtility.clickOnElement(statusCanceled);
+		PageUtility.clickByJavaScript(status,driver);
+		PageUtility.clickByJavaScript(statusHold,driver);
+		PageUtility.clickByJavaScript(statusCanceled,driver);
 	}
+	public void searchProject(String projectName)
+	{
+		WaitUtility.waitFowaitForAnElementToBeVisible(driver, searchProject);
+		PageUtility.clickByJavaScript(searchProject,driver);
+		PageUtility.enterTextByJavaScript(driver,searchProject, projectName);
+		
+	}
+	public boolean addedProjectDisplayed()
+	{
+		return resultSearchProject.isDisplayed();
+	}
+	public void clickOnDeleteProject()
+	{
+		PageUtility.clickByJavaScript(deleteProject,driver);
+	}
+	public void clickOnAlertCancel()
+	{
+		PageUtility.clickOnElement(cancelDelete);
+	}
+	public void clickOnAlertDelete()
+	{
+		PageUtility.clickOnElement(deleteButton);
+	}
+	public String getDeleteWarning() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		return driver.switchTo().alert().getText();
+		
+	}
+	
+	//delete functionality
 }

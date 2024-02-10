@@ -6,20 +6,16 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
-import java.time.Duration;
 import java.util.Iterator;
 
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PageUtility
 {
@@ -249,6 +245,7 @@ public static void clickOn(WebDriver driver,String value)
 	actions.sendKeys(Keys.valueOf(value)).build().perform();
 }
 
+
 public static void singleTabHandling(WebDriver driver,WebElement element)
 {
 	driver.getWindowHandle();
@@ -256,7 +253,7 @@ public static void singleTabHandling(WebDriver driver,WebElement element)
 
 
 // how to handle window
-public static void multipleTabHandling(WebDriver driver,WebElement element)
+public static void multipleTabHandling(WebDriver driver)
 {
 	Set<String> handles=driver.getWindowHandles();
 	Iterator<String>iterate=handles.iterator();
@@ -335,4 +332,30 @@ public static void scrollToBottom(WebDriver driver, int percentScroll)
     	driver.switchTo().defaultContent();
     }
 
+    public static void robotSearchClient() throws AWTException
+    {
+    	Robot robot= new Robot();
+    	robot.keyPress(KeyEvent.VK_A);
+		robot.keyRelease(KeyEvent.VK_A);
+		robot.keyPress(KeyEvent.VK_P);
+		robot.keyRelease(KeyEvent.VK_P);
+		robot.keyPress(KeyEvent.VK_S);
+		robot.keyRelease(KeyEvent.VK_S);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+    }
+    public static void robotToField() throws AWTException
+    {
+    	Robot robot= new Robot();
+    	robot.keyPress(KeyEvent.VK_S);
+		robot.keyRelease(KeyEvent.VK_S);
+		robot.keyPress(KeyEvent.VK_A);
+		robot.keyRelease(KeyEvent.VK_A);
+		robot.keyPress(KeyEvent.VK_N);
+		robot.keyRelease(KeyEvent.VK_N);
+		robot.keyPress(KeyEvent.VK_A);
+		robot.keyRelease(KeyEvent.VK_A);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+    }
 }

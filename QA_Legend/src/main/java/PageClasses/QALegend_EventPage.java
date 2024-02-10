@@ -1,6 +1,8 @@
 package PageClasses;
 
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,9 +41,17 @@ public class QALegend_EventPage
 	@FindBy(id = "location")
 	WebElement inputFieldLocation;
 	
-	@FindBy(xpath = "//div[@id='s2id_event_labels']")
-	WebElement inputField_Label;
+	@FindBy(xpath = "//button[text()='day']")
+	WebElement dayButton;
 	
+	@FindBy(xpath = "//div[@class='fc-event-container']//a[last()]")
+	WebElement startDateGridline;
+	
+	@FindBy(xpath = "//h4[text()='Event details']")
+	WebElement eventTitlefromPage;
+	
+	@FindBy(id = "//input[starts-with(@id,'s2id')][1]")
+	WebElement inputField_Label;
 	@FindBy(xpath = "//b[@role='presentation'][1]")
 	WebElement clientFieldDropDown;
 	
@@ -118,9 +128,6 @@ public class QALegend_EventPage
 	 }
 	 public void inputLabel(String label)
 	 {
-		 System.out.println(inputField_Label.isEnabled());
-		 System.out.println(inputField_Label.isDisplayed());
-		 System.out.println(inputField_Label.isEnabled());
 		 WaitUtility.waitForAnElementToBeClickable(driver, inputField_Label);
 		 PageUtility.clickOnEnterKey(driver, inputField_Label);
 		 PageUtility.enterText(inputField_Label, label);
@@ -128,9 +135,6 @@ public class QALegend_EventPage
 
 	 public void inputClientField(String client)
 	 {
-		 System.out.println(clientFieldDropDown.isEnabled());
-		 System.out.println(clientFieldDropDown.isDisplayed());
-		 System.out.println(clientFieldDropDown.isEnabled());
 		 WaitUtility.waitForAnElementToBeClickable(driver, inputField_Label);
 		 PageUtility.clickOnElement(clientFieldDropDown);
 		 
@@ -166,13 +170,20 @@ public class QALegend_EventPage
 	{
 		
 	}
-	public void searchForAddedEvent(String title)
+	public void clickOnDayButton()
 	{
-		PageUtility.getTextFromElement(clientField_SearchBox);
+		WaitUtility.waitForAnElementToBeClickable(driver, dayButton);
+		PageUtility.clickOnElement(dayButton);
 	}
    
-	
-	
+	public void clickOnEventGrid()
+	{
+		PageUtility.clickOnElement(startDateGridline);
+	}
+	public boolean getEventTitle()
+	{
+		return PageUtility.isElementDisplayed(eventTitlefromPage);
+	}
 	
 	
 	

@@ -1,12 +1,13 @@
 package PageClasses;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtility;
-import Utilities.WaitUtility;
 
 public class QALegend_ClientPage
 {
@@ -63,6 +64,15 @@ public class QALegend_ClientPage
 	@FindBy(xpath="//span[text()='Print']")
 	 WebElement printClientReport;
 
+	@FindBy(xpath="//input[@type='search' and @placeholder='Search']")
+	WebElement searchForSavedClients;
+	
+	@FindBy(xpath = "//h1[text()='Demo CRM']")
+	WebElement titleOfThePage;
+	
+	@FindBy(xpath = "//table//thead//tr//th")
+	List<WebElement> countofColumnHeadings;
+	
 	public QALegend_ClientPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver=driver;
@@ -150,7 +160,12 @@ public class QALegend_ClientPage
    {
 	return fieldMandatoryMessage.getText();
    }
-	
+	public void searchForClient(String client)
+	{
+		PageUtility.clickOnElement(searchForSavedClients);
+		PageUtility.enterText(searchForSavedClients,client);
+		PageUtility.clickOnEnterKey(driver,searchForSavedClients);
+	}
 	public void downloadExcelReport()
 	{
 	PageUtility.clickOnElement(excelDownload);
@@ -161,8 +176,25 @@ public class QALegend_ClientPage
 	}
 	
 	
-	
-	
-	
-	
+	public void windowHandle()
+	{
+		PageUtility.windowHandling(driver);
+	}
+	public void switchToDefault()
+	{
+		PageUtility.switchTab(driver, null);
+	}
+	public int noOfColumns()
+	{
+		PageUtility.windowHandling(driver);
+		List<WebElement> rows = countofColumnHeadings;
+		System.out.println(rows.size());// assertion
+		
+		  return rows.size();
+		
+	}
+	public void switchParentTab()
+	{
+		PageUtility.switchWindowToParentTab(driver);
+	}
 }

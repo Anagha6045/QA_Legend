@@ -73,6 +73,10 @@ public void logOut()
   PageUtility.clickOnElement(userProfileName);
   PageUtility.clickOnElement(signOutUser);
 }
+public String signInUrl()
+{
+	return PageUtility.getUrlOfThePage(driver);
+}
 public String getUserProfileName()
 {
 String userName= PageUtility.getTextFromElement(userProfileName);
@@ -119,5 +123,9 @@ public void plotTicketsPieChart()
 public void clickOnLeave()
 {
 	PageUtility.clickOnElement(leaveButton);
+}
+public String getUrl()
+{
+	return PageUtility.getUrlOfThePage(driver);
 }
 }

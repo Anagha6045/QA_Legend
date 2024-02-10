@@ -74,6 +74,7 @@ public class QALegend_LeavePage
 	
 	public void clickOnDropDown()
 	{
+		WaitUtility.waitForAnElementToBeClickable(driver, clickDropDown);
 		PageUtility.clickOnElement(clickDropDown);
 	}
 	public void selectCasualLeave()
@@ -109,7 +110,10 @@ public class QALegend_LeavePage
 	{
 		PageUtility.clickOnElement(submit_ApplyLeave);
 	}
-	
+	public boolean isAbleToApplyLeave()
+	{
+		return PageUtility.isElementEnabled(submit_ApplyLeave);
+	}
 	
 
 }

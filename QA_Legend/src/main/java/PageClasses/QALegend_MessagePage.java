@@ -2,6 +2,7 @@ package PageClasses;
 
 import java.awt.AWTException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,7 +31,11 @@ public class QALegend_MessagePage
 	@FindBy(name = "to_user_id")
 	WebElement inputField_To;
 
-	@FindBy(xpath = "//*[@id=\"select2-result-label-18\"]/text()")
+	/*
+	 * @FindBy(xpath = "//*[@id='select2-result-label-18']/text()") WebElement
+	 * inputFieldToAddress;
+	 */
+	@FindBy(xpath = "//select[@name='to_user_id']")
 	WebElement inputFieldToAddress;
 	
 	@FindBy(id="s2id_autogen46_search")
@@ -51,7 +56,10 @@ public class QALegend_MessagePage
     @FindBy(id="search-messages")
     WebElement searchSentItems;
     
-    @FindBy(xpath = "//*[@id=\"s2id_autogen24_search\"]")
+    @FindBy(id="select2-chosen-100")
+    WebElement toField;
+    
+    @FindBy(xpath = "(//table//tbody//tr[@class='odd'])[1]")
     WebElement selectFirstRecipient;
 	
 	public QALegend_MessagePage(WebDriver driver) 
@@ -97,26 +105,30 @@ public class QALegend_MessagePage
 	public void sendMessage()
 	{
 		PageUtility.clickOnElement(buttonSend);
-		System.out.println(selectFirstRecipient.getText());
 	}
-	public void input_ToRecipient(String recipient)
+	public void input_ToRecipient(String recipient) throws AWTException
 	{
 		PageUtility.clickOnElement(inputField_ToDropDown);
-		PageUtility.enterText(inputFieldToAddress,recipient);
-		//Select select =new Select(inputField_To);
-		//select.selectByVisibleText(recipient);
-		//select.selectByValue("15");
-		
-		
-		
-		
+		PageUtility.robotToField();
+
 	}
 	public void clickOnSentItems()
 	{
-		PageUtility.clickOnElement(button_SentItems);
+		PageUtility.clickByJavaScript(button_SentItems,driver);
 	}
-	public void searchForRecipient( )
+	
+	  public void toField()
+	  {
+	  PageUtility.moveToElement(driver, toField);
+	  PageUtility.clickOnEnterKey(driver, toField);
+	  Select select= new Select(inputFieldToAddress);
+		select.selectByValue("33");
+	  }
+
+	public boolean isSubjectVisible()
 	{
-		PageUtility.enterText(searchSentItems);
+		
+		return PageUtility.isElementDisplayed(selectFirstRecipient);
 	}
+	 
 }

@@ -1,5 +1,6 @@
 package PageClasses;
 
-public class QALegend_TeamMemberPage {
+public class QALegend_TeamMemberPage
+{
 
 }

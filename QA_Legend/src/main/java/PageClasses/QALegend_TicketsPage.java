@@ -1,9 +1,8 @@
 package PageClasses;
 
-import java.util.ArrayList;
+import java.awt.AWTException;
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,8 +23,36 @@ public class QALegend_TicketsPage
 	@FindBy(xpath = "//tbody//child::tr")
 	List<WebElement> noOfTickets;
 	
+	@FindBy(xpath = "//a[@title='Add ticket' and text()=' Add ticket']")
+	WebElement addNewTicket;
 	
+	@FindBy(id="title")
+	WebElement inputField_Title;
 	
+	@FindBy(id="title")
+	WebElement input_FieldTitle;
+	@FindBy(xpath = "//div[@class='form-group']//label[@for='client_id']")
+	WebElement dropdownIcon;
+	
+	@FindBy(xpath  = "//select[@name='client_id']")
+	WebElement selectDropDown;
+	
+	@FindBy(xpath="//ul//li//div[@class='select2-result-label' and text()='APS Test Company ']]")
+	WebElement inputSearch_Client;
+	
+	@FindBy(id="description")
+	WebElement input_Description;
+	
+	@FindBy(xpath="//button[text()=' Save']")
+	WebElement clickOnSave;
+	@FindBy(xpath = "//button[text()=' Close']")
+	WebElement clickOnCancel;
+	
+	@FindBy(xpath = "(//table//tbody//tr//td//a)[1]")
+	WebElement hyperlinkTicketTitle;
+	
+	@FindBy(xpath = "//button[text()=' Actions                        ']")
+	WebElement actionButtonOnOpenedTicketPage;
 	
 	public QALegend_TicketsPage(WebDriver driver)
 	{
@@ -34,11 +61,37 @@ public class QALegend_TicketsPage
 		PageFactory.initElements(driver, this);
 	}
 
+	public void input_AddTicket()
+	{
+		PageUtility.clickOnElement(addNewTicket);
+	}
+	
+	public void input_Title(String title)
+	{
+		PageUtility.enterText(input_FieldTitle,title);
+	}
+
+	
+	public void input_Description(String description)
+	{
+		PageUtility.enterText(input_Description,description);
+	}
 	public void clickOnPrint()
 	{
 		PageUtility.clickOnElement(buttonPrint);
 	}
 	
+	public void inputClient()
+	{
+		PageUtility.clickOnElement(dropdownIcon);
+	}
+	public void selectFromDropDown(String company) throws AWTException
+	{
+		PageUtility.clickByJavaScript(selectDropDown,driver);
+		PageUtility.scrollThePage(inputSearch_Client, driver);
+		PageUtility.clickByJavaScript(inputSearch_Client,driver);
+		PageUtility.robotSearchClient();
+	}
 	public String countTheNoOfTickets()
 	{
 		PageUtility.windowHandling(driver);
@@ -54,5 +107,25 @@ public class QALegend_TicketsPage
 	{
 		PageUtility.switchWindowToParentTab(driver);
 	}
+	public void clickOnSave()
+	{
+		PageUtility.clickOnElement(clickOnSave);
+	}
     
+	public void clickOnCancel()
+	{
+		PageUtility.clickOnElement(clickOnCancel);
+	}
+	public void clickOnFirstTicket()
+	{
+		PageUtility.clickOnElement(hyperlinkTicketTitle);
+	}
+	public boolean visibilityActionButton()
+	{
+		return PageUtility.isElementDisplayed(actionButtonOnOpenedTicketPage);
+	}
+	public boolean enabledActionButton()
+	{
+		return PageUtility.isElementEnabled(actionButtonOnOpenedTicketPage);
+	}
 }

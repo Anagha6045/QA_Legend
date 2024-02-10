@@ -37,5 +37,9 @@ public class ExcelUtility
 	 return String.valueOf(value);
 	 
  }
+ //public static String getString()
+ {
+	 
+ }
  
 }
