@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>12/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Feb 10 16:10:31 IST 2024</td>
+<td>Started on:</td><td>Mon Feb 12 08:02:47 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>127 seconds (127477 ms)</td>
+<tr><td>Total time:</td><td>10 seconds (10816 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,103 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='TestCases.QALegendTestCases.statusOfProjects()'><b>statusOfProjects</b><br>Test class: TestCases.QALegendTestCases</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#title&quot;}
-  (Session info: chrome=121.0.6167.161)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a108672e35343a61d00b68522b6f5543, findElement {using=id, value=title}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\anagh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50165}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50165/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a108672e35343a61d00b68522b6f5543
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.sendKeys(Unknown Source)
-	at Utilities.PageUtility.enterText(PageUtility.java:78)
-	at PageClasses.QALegend_ProjectPage.inputTitle(QALegend_ProjectPage.java:106)
-	at TestCases.QALegendTestCases.statusOfProjects(QALegendTestCases.java:255)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace79486225", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace79486225'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#title&quot;}
-  (Session info: chrome=121.0.6167.161)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a108672e35343a61d00b68522b6f5543, findElement {using=id, value=title}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\anagh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50165}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50165/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a108672e35343a61d00b68522b6f5543
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.sendKeys(Unknown Source)
-	at Utilities.PageUtility.enterText(PageUtility.java:78)
-	at PageClasses.QALegend_ProjectPage.inputTitle(QALegend_ProjectPage.java:106)
-	at TestCases.QALegendTestCases.statusOfProjects(QALegendTestCases.java:255)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>5</td>
-<td>TestCases.QALegendTestCases@4b8ee4de</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -175,63 +78,8 @@ Session ID: a108672e35343a61d00b68522b6f5543
 <tr>
 <td title='TestCases.QALegendTestCases.loginCRM()'><b>loginCRM</b><br>Test class: TestCases.QALegendTestCases</td>
 <td></td>
-<td>2</td>
-<td>TestCases.QALegendTestCases@4b8ee4de</td></tr>
-<tr>
-<td title='TestCases.QALegendTestCases.loginCRMDataProvider()'><b>loginCRMDataProvider</b><br>Test class: TestCases.QALegendTestCases<br>Parameters: admin@admin.Com, 12345678</td>
-<td></td>
 <td>1</td>
-<td>TestCases.QALegendTestCases@4b8ee4de</td></tr>
-<tr>
-<td title='TestCases.QALegendTestCases.loginCRMDataProvider()'><b>loginCRMDataProvider</b><br>Test class: TestCases.QALegendTestCases<br>Parameters: admin@admin.Com, 12345600</td>
-<td></td>
-<td>1</td>
-<td>TestCases.QALegendTestCases@4b8ee4de</td></tr>
-<tr>
-<td title='TestCases.QALegendTestCases.sendEMail()'><b>sendEMail</b><br>Test class: TestCases.QALegendTestCases</td>
-<td></td>
-<td>8</td>
-<td>TestCases.QALegendTestCases@4b8ee4de</td></tr>
-<tr>
-<td title='TestCases.QALegendTestCases.addNotes()'><b>addNotes</b><br>Test class: TestCases.QALegendTestCases</td>
-<td></td>
-<td>4</td>
-<td>TestCases.QALegendTestCases@4b8ee4de</td></tr>
-<tr>
-<td title='TestCases.QALegendTestCases.loginCRMDataProvider()'><b>loginCRMDataProvider</b><br>Test class: TestCases.QALegendTestCases<br>Parameters: admin@adminInvalid.Com, 12345678</td>
-<td></td>
-<td>2</td>
-<td>TestCases.QALegendTestCases@4b8ee4de</td></tr>
-<tr>
-<td title='TestCases.QALegendTestCases.downloadClientReport()'><b>downloadClientReport</b><br>Test class: TestCases.QALegendTestCases</td>
-<td></td>
-<td>4</td>
-<td>TestCases.QALegendTestCases@4b8ee4de</td></tr>
-<tr>
-<td title='TestCases.QALegendTestCases.addEvent()'><b>addEvent</b><br>Test class: TestCases.QALegendTestCases</td>
-<td></td>
-<td>8</td>
-<td>TestCases.QALegendTestCases@4b8ee4de</td></tr>
-<tr>
-<td title='TestCases.QALegendTestCases.leaveApplications()'><b>leaveApplications</b><br>Test class: TestCases.QALegendTestCases</td>
-<td></td>
-<td>3</td>
-<td>TestCases.QALegendTestCases@4b8ee4de</td></tr>
-<tr>
-<td title='TestCases.QALegendTestCases.addTickets()'><b>addTickets</b><br>Test class: TestCases.QALegendTestCases</td>
-<td></td>
-<td>4</td>
-<td>TestCases.QALegendTestCases@4b8ee4de</td></tr>
-<tr>
-<td title='TestCases.QALegendTestCases.addClient()'><b>addClient</b><br>Test class: TestCases.QALegendTestCases</td>
-<td></td>
-<td>6</td>
-<td>TestCases.QALegendTestCases@4b8ee4de</td></tr>
-<tr>
-<td title='TestCases.QALegendTestCases.verifyNumberOfTickets()'><b>verifyNumberOfTickets</b><br>Test class: TestCases.QALegendTestCases</td>
-<td></td>
-<td>3</td>
-<td>TestCases.QALegendTestCases@4b8ee4de</td></tr>
+<td>TestCases.QALegendTestCases@45099dd3</td></tr>
 </table><p>
 </body>
 </html>

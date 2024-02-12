@@ -16,9 +16,9 @@
 	   <!--<test thread-count="3" name="Test" parallel="methods">-->
     <classes>
       <class name="TestCases.QALegendTestCases">
-		 <!-- <methods>
+		  <methods>
 			        <include name="loginCRM"></include>
-					<include name="addEvent"></include>
+					<!--<include name="addEvent"></include>
 					<include name="addClient"></include>
 					<include name="downloadClientReport"></include>
 					<include name="sendEMail"></include>  
@@ -27,8 +27,8 @@
 					<include name="leaveApplications"></include>
 					<include name="statusOfProjects"></include>
 					<include name="addTickets"></include>
-					<include name="loginCRMDataProvider"></include>
-		  </methods>-->
+					<include name="loginCRMDataProvider"></include>-->
+		  </methods>
       </class>
     </classes>
   </test> <!-- Test -->
