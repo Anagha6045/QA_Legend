@@ -19,9 +19,9 @@
 		  <methods>
 			        <include name="loginCRM"></include>
 					<include name="addEvent"></include>
-					<include name="addClient"></include>
+					<!--<include name="addClient"></include>
 					<include name="downloadClientReport"></include>
-					<!--<include name="sendEMail"></include>  
+					<include name="sendEMail"></include>  
 					<include name="verifyNumberOfTickets"></include>
 					<include name="addNotes"></include>
 					<include name="leaveApplications"></include>
