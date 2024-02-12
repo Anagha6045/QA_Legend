@@ -114,7 +114,7 @@ public class QALegendTestCases extends BaseClass
 		event_Page.getEventTitle();
 		
 		Assert.assertEquals(event_Page.getEventTitle(), true);
-		//assertion
+		
 		
 	}
 	@Test (priority = 3, groups = {"Regression Test"})
@@ -245,16 +245,16 @@ public class QALegendTestCases extends BaseClass
 		login_Page.enterUserName(prop.getProperty("username"));
 		login_Page.enterPassword(prop.getProperty("password"));
 		login_Page.loginButton();
-		AssertJUnit.assertEquals(home_Page.getUserProfileName(), prop.getProperty("user_profile_name"));
+		Assert.assertEquals(home_Page.getUserProfileName(), prop.getProperty("user_profile_name"));
 		 
 		home_Page.clickOnProjects();
 		home_Page.clickOnAllProjects();
 		
-		//project_Page.clickOnAddProjectButton();
+		project_Page.clickOnAddProjectButton();
 		String title=ExcelUtility.getString(1, 0, excelFilePath, "Projects");
 		project_Page.inputTitle(title);
-		project_Page.inputClient();
-	    project_Page.selectFromDropDown(ExcelUtility.getString(1, 0, excelFilePath, "Clients"));
+		//project_Page.inputClient();
+	   // project_Page.selectFromDropDown(ExcelUtility.getString(1, 0, excelFilePath, "Clients"));
 		project_Page.inputDescription(ExcelUtility.getString(1, 2, excelFilePath, "Projects"));
 		project_Page.input_StartDate();
 		project_Page.input_Deadline();

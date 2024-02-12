@@ -19,7 +19,7 @@
 		  <methods>
 			        <include name="loginCRM"></include>
 					<include name="addEvent"></include>
-					<!--<include name="addClient"></include>
+					<include name="addClient"></include>
 					<include name="downloadClientReport"></include>
 					<include name="sendEMail"></include>  
 					<include name="verifyNumberOfTickets"></include>
@@ -27,7 +27,7 @@
 					<include name="leaveApplications"></include>
 					<include name="statusOfProjects"></include>
 					<include name="addTickets"></include>
-					<include name="loginCRMDataProvider"></include>-->
+					<include name="loginCRMDataProvider"></include>
 		  </methods>
       </class>
     </classes>

@@ -27,6 +27,8 @@ public class QALegend_ProjectPage
 	@FindBy(xpath  = "//select[@name='client_id']")
 	WebElement selectDropDown;
 	
+	@FindBy(xpath ="(//a[@class='select2-choice'])[3]")
+	WebElement click_ClientField;
 	@FindBy(xpath="//ul//li//div[@class='select2-result-label' and text()='APS Test Company ']")
 	WebElement inputSearch_Client;
 	
@@ -111,8 +113,8 @@ public class QALegend_ProjectPage
 	}
 	public void selectFromDropDown(String company) throws AWTException
 	{
-		PageUtility.clickByJavaScript(selectDropDown,driver);
-		PageUtility.scrollThePage(inputSearch_Client, driver);
+		PageUtility.clickByJavaScript(click_ClientField,driver);
+	//	PageUtility.scrollThePage(inputSearch_Client, driver);
 		PageUtility.clickByJavaScript(inputSearch_Client,driver);
 		PageUtility.robotSearchClient();
 	}

@@ -173,12 +173,12 @@ public class QALegend_EventPage
 	public void clickOnDayButton()
 	{
 		WaitUtility.waitForAnElementToBeClickable(driver, dayButton);
-		PageUtility.clickOnElement(dayButton);
+		PageUtility.clickByJavaScript(dayButton,driver);
 	}
    
 	public void clickOnEventGrid()
 	{
-		PageUtility.clickOnElement(startDateGridline);
+		PageUtility.clickByJavaScript(startDateGridline, driver);
 	}
 	public boolean getEventTitle()
 	{

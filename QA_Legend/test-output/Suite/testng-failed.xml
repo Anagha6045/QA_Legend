@@ -12,6 +12,8 @@
           <include name="initialization"/>
           <include name="tearDown"/>
           <include name="statusOfProjects"/>
+          <include name="sendEMail"/>
+          <include name="addEvent"/>
         </methods>
       </class> <!-- TestCases.QALegendTestCases -->
     </classes>
