@@ -146,7 +146,6 @@ public class QALegendTestCases extends BaseClass
 	    client_Page.inputCountry(ExcelUtility.getString(1, 5, excelFilePath, "Clients"));
 	    client_Page.inputPhone(ExcelUtility.getNumeric(1, 6, excelFilePath, "Clients"));
 	    client_Page.inputWebsite(ExcelUtility.getString(1, 7, excelFilePath, "Clients"));
-	    client_Page.inputVAT(ExcelUtility.getNumeric(1, 8, excelFilePath, "Clients"));
 	    client_Page.button_Save();
 	    Assert.assertEquals(client_Page.mandatoryMessage(), prop.getProperty("fieldMandatoryMessage"));
 	    
