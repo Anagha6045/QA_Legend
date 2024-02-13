@@ -56,7 +56,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">Feb 12, 2024 07:03:07 pm</span>
+                    <span class="badge badge-primary">Feb 13, 2024 06:41:41 pm</span>
                 </a>
             </li>
         </ul>
@@ -72,15 +72,7 @@
           <span class="title">Tests</span>
         </a>
       </li>
-            <li class="nav-item dropdown" onclick="toggleView('exception-view')">
-        <a id="nav-ex" class="dropdown-toggle" href="exception.html">
-          <span class="icon-holder">
-            <i class="fa fa-bug"></i>
-          </span>
-          <span class="title">Exception</span>
-        </a>
-      </li>
-      <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+            <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
         <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
           <span class="icon-holder">
             <i class="fa fa-bar-chart"></i>
@@ -109,7 +101,7 @@
 					</a>
 					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 						<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success pull-right"></span></a>
-						<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>
+						
 						
 						
 						
@@ -131,19 +123,19 @@
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">loginCRM</p>
-							<p class="duration text-sm">0h 0m 2s+72ms</p>
-							<span class="datetime">19:03:19 pm</span>
+							<p class="name">loginCRMDataProvider</p>
+							<p class="duration text-sm">0h 0m 1s+284ms</p>
+							<span class="datetime">18:41:47 pm</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">loginCRM</h5>
-									<span class='badge badge-success'>02.12.2024 19:03:19</span>
-									<span class='badge badge-danger'>02.12.2024 19:03:21</span>
-									<span class='badge badge-default'>0h 0m 2s+72ms</span>
+									<h5 class="test-status text-pass">loginCRMDataProvider</h5>
+									<span class='badge badge-success'>02.13.2024 18:41:47</span>
+									<span class='badge badge-danger'>02.13.2024 18:41:48</span>
+									<span class='badge badge-default'>0h 0m 1s+284ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -160,7 +152,7 @@
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-check text-pass"></i></td>
-				<td>7:03:21 pm</td>
+				<td>6:41:48 pm</td>
 				<td>
 						Testcase passed
 				</td>
@@ -170,28 +162,28 @@
 </div>
 					</div>
 				</li>
-				<li class="test-item"  status="fail" test-id="2"
+				<li class="test-item"  status="pass" test-id="2"
 					author=""
 					tag=""
 					device="">
-					<div class="status-avatar fail-bg">
-						<i class="fa fa-times text-white"></i>
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">addEvent</p>
-							<p class="duration text-sm">0h 0m 6s+605ms</p>
-							<span class="datetime">19:03:27 pm</span>
+							<p class="name">loginCRMDataProvider</p>
+							<p class="duration text-sm">0h 0m 1s+33ms</p>
+							<span class="datetime">18:41:52 pm</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-fail">addEvent</h5>
-									<span class='badge badge-success'>02.12.2024 19:03:27</span>
-									<span class='badge badge-danger'>02.12.2024 19:03:34</span>
-									<span class='badge badge-default'>0h 0m 6s+605ms</span>
+									<h5 class="test-status text-pass">loginCRMDataProvider</h5>
+									<span class='badge badge-success'>02.13.2024 18:41:52</span>
+									<span class='badge badge-danger'>02.13.2024 18:41:53</span>
+									<span class='badge badge-default'>0h 0m 1s+33ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -207,75 +199,14 @@
 	</tr></thead>
 	<tbody>
 			<tr class="event-row">
-				<td><i class="fa fa-times text-fail"></i></td>
-				<td>7:03:33 pm</td>
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>6:41:53 pm</td>
 				<td>
-						<textarea disabled class="code-block">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=121.0.6167.161)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.16.0', revision: '15400459dd*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7d4ea5a8d0871e62945ad5a80787e699, executeScript {script=arguments[0].click();, args=[{element-6066-11e4-a52e-4f735466cecf=A572659BF48A75FF61A0EEFCE318A905_element_194}]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\anagh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61942}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61942/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7d4ea5a8d0871e62945ad5a80787e699
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:468)
-	at Utilities.PageUtility.clickByJavaScript(PageUtility.java:290)
-	at PageClasses.QALegend_EventPage.clickOnEventGrid(QALegend_EventPage.java:181)
-	at TestCases.QALegendTestCases.addEvent(QALegendTestCases.java:113)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-				</td>
-			</tr>
-			<tr class="event-row">
-				<td><i class="fa fa-times text-fail"></i></td>
-				<td>7:03:34 pm</td>
-				<td>
-						Testcase Failed
+						Testcase passed
 				</td>
 			</tr>
 	</tbody>
 </table>
-</div>
-<div class="detail-foot">
-	<ul class="attachments">
-			<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\anagh\git\QA_Legend\QA_Legend\test-output\addEvent.png' src='C:\Users\anagh\git\QA_Legend\QA_Legend\test-output\addEvent.png'>
-	</ul>
 </div>
 					</div>
 				</li>
@@ -288,19 +219,19 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">addClient</p>
-							<p class="duration text-sm">0h 0m 4s+413ms</p>
-							<span class="datetime">19:03:38 pm</span>
+							<p class="name">loginCRMDataProvider</p>
+							<p class="duration text-sm">0h 0m 0s+970ms</p>
+							<span class="datetime">18:41:57 pm</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">addClient</h5>
-									<span class='badge badge-success'>02.12.2024 19:03:38</span>
-									<span class='badge badge-danger'>02.12.2024 19:03:43</span>
-									<span class='badge badge-default'>0h 0m 4s+413ms</span>
+									<h5 class="test-status text-pass">loginCRMDataProvider</h5>
+									<span class='badge badge-success'>02.13.2024 18:41:57</span>
+									<span class='badge badge-danger'>02.13.2024 18:41:58</span>
+									<span class='badge badge-default'>0h 0m 0s+970ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -317,7 +248,7 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-check text-pass"></i></td>
-				<td>7:03:43 pm</td>
+				<td>6:41:58 pm</td>
 				<td>
 						Testcase passed
 				</td>
@@ -336,19 +267,19 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">downloadClientReport</p>
-							<p class="duration text-sm">0h 0m 3s+500ms</p>
-							<span class="datetime">19:03:51 pm</span>
+							<p class="name">addEvent</p>
+							<p class="duration text-sm">0h 0m 5s+142ms</p>
+							<span class="datetime">18:42:03 pm</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">downloadClientReport</h5>
-									<span class='badge badge-success'>02.12.2024 19:03:51</span>
-									<span class='badge badge-danger'>02.12.2024 19:03:55</span>
-									<span class='badge badge-default'>0h 0m 3s+500ms</span>
+									<h5 class="test-status text-pass">addEvent</h5>
+									<span class='badge badge-success'>02.13.2024 18:42:03</span>
+									<span class='badge badge-danger'>02.13.2024 18:42:08</span>
+									<span class='badge badge-default'>0h 0m 5s+142ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -365,7 +296,7 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-check text-pass"></i></td>
-				<td>7:03:55 pm</td>
+				<td>6:42:08 pm</td>
 				<td>
 						Testcase passed
 				</td>
@@ -384,19 +315,19 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">sendEMail</p>
-							<p class="duration text-sm">0h 0m 6s+840ms</p>
-							<span class="datetime">19:04:00 pm</span>
+							<p class="name">addClient</p>
+							<p class="duration text-sm">0h 0m 3s+992ms</p>
+							<span class="datetime">18:42:12 pm</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">sendEMail</h5>
-									<span class='badge badge-success'>02.12.2024 19:04:00</span>
-									<span class='badge badge-danger'>02.12.2024 19:04:06</span>
-									<span class='badge badge-default'>0h 0m 6s+840ms</span>
+									<h5 class="test-status text-pass">addClient</h5>
+									<span class='badge badge-success'>02.13.2024 18:42:12</span>
+									<span class='badge badge-danger'>02.13.2024 18:42:16</span>
+									<span class='badge badge-default'>0h 0m 3s+992ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -413,7 +344,7 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-check text-pass"></i></td>
-				<td>7:04:06 pm</td>
+				<td>6:42:16 pm</td>
 				<td>
 						Testcase passed
 				</td>
@@ -432,19 +363,19 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">verifyNumberOfTickets</p>
-							<p class="duration text-sm">0h 0m 2s+320ms</p>
-							<span class="datetime">19:04:10 pm</span>
+							<p class="name">downloadClientReport</p>
+							<p class="duration text-sm">0h 0m 2s+861ms</p>
+							<span class="datetime">18:42:20 pm</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">verifyNumberOfTickets</h5>
-									<span class='badge badge-success'>02.12.2024 19:04:10</span>
-									<span class='badge badge-danger'>02.12.2024 19:04:13</span>
-									<span class='badge badge-default'>0h 0m 2s+320ms</span>
+									<h5 class="test-status text-pass">downloadClientReport</h5>
+									<span class='badge badge-success'>02.13.2024 18:42:20</span>
+									<span class='badge badge-danger'>02.13.2024 18:42:23</span>
+									<span class='badge badge-default'>0h 0m 2s+861ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -461,7 +392,7 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-check text-pass"></i></td>
-				<td>7:04:13 pm</td>
+				<td>6:42:23 pm</td>
 				<td>
 						Testcase passed
 				</td>
@@ -480,19 +411,19 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">addNotes</p>
-							<p class="duration text-sm">0h 0m 5s+259ms</p>
-							<span class="datetime">19:04:22 pm</span>
+							<p class="name">sendEMail</p>
+							<p class="duration text-sm">0h 0m 7s+383ms</p>
+							<span class="datetime">18:42:27 pm</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">addNotes</h5>
-									<span class='badge badge-success'>02.12.2024 19:04:22</span>
-									<span class='badge badge-danger'>02.12.2024 19:04:27</span>
-									<span class='badge badge-default'>0h 0m 5s+259ms</span>
+									<h5 class="test-status text-pass">sendEMail</h5>
+									<span class='badge badge-success'>02.13.2024 18:42:27</span>
+									<span class='badge badge-danger'>02.13.2024 18:42:34</span>
+									<span class='badge badge-default'>0h 0m 7s+383ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -509,7 +440,7 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-check text-pass"></i></td>
-				<td>7:04:27 pm</td>
+				<td>6:42:34 pm</td>
 				<td>
 						Testcase passed
 				</td>
@@ -528,19 +459,19 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">leaveApplications</p>
-							<p class="duration text-sm">0h 0m 4s+463ms</p>
-							<span class="datetime">19:04:39 pm</span>
+							<p class="name">verifyNumberOfTickets</p>
+							<p class="duration text-sm">0h 0m 2s+643ms</p>
+							<span class="datetime">18:42:38 pm</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">leaveApplications</h5>
-									<span class='badge badge-success'>02.12.2024 19:04:39</span>
-									<span class='badge badge-danger'>02.12.2024 19:04:43</span>
-									<span class='badge badge-default'>0h 0m 4s+463ms</span>
+									<h5 class="test-status text-pass">verifyNumberOfTickets</h5>
+									<span class='badge badge-success'>02.13.2024 18:42:38</span>
+									<span class='badge badge-danger'>02.13.2024 18:42:41</span>
+									<span class='badge badge-default'>0h 0m 2s+643ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -557,7 +488,7 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-check text-pass"></i></td>
-				<td>7:04:43 pm</td>
+				<td>6:42:41 pm</td>
 				<td>
 						Testcase passed
 				</td>
@@ -576,19 +507,19 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">statusOfProjects</p>
-							<p class="duration text-sm">0h 0m 4s+298ms</p>
-							<span class="datetime">19:04:52 pm</span>
+							<p class="name">addNotes</p>
+							<p class="duration text-sm">0h 0m 3s+168ms</p>
+							<span class="datetime">18:42:45 pm</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">statusOfProjects</h5>
-									<span class='badge badge-success'>02.12.2024 19:04:52</span>
-									<span class='badge badge-danger'>02.12.2024 19:04:56</span>
-									<span class='badge badge-default'>0h 0m 4s+298ms</span>
+									<h5 class="test-status text-pass">addNotes</h5>
+									<span class='badge badge-success'>02.13.2024 18:42:45</span>
+									<span class='badge badge-danger'>02.13.2024 18:42:48</span>
+									<span class='badge badge-default'>0h 0m 3s+168ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -605,7 +536,7 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-check text-pass"></i></td>
-				<td>7:04:56 pm</td>
+				<td>6:42:48 pm</td>
 				<td>
 						Testcase passed
 				</td>
@@ -624,19 +555,19 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">addTickets</p>
-							<p class="duration text-sm">0h 0m 4s+948ms</p>
-							<span class="datetime">19:05:01 pm</span>
+							<p class="name">leaveApplications</p>
+							<p class="duration text-sm">0h 0m 3s+418ms</p>
+							<span class="datetime">18:42:52 pm</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">addTickets</h5>
-									<span class='badge badge-success'>02.12.2024 19:05:01</span>
-									<span class='badge badge-danger'>02.12.2024 19:05:05</span>
-									<span class='badge badge-default'>0h 0m 4s+948ms</span>
+									<h5 class="test-status text-pass">leaveApplications</h5>
+									<span class='badge badge-success'>02.13.2024 18:42:52</span>
+									<span class='badge badge-danger'>02.13.2024 18:42:56</span>
+									<span class='badge badge-default'>0h 0m 3s+418ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -653,7 +584,7 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-check text-pass"></i></td>
-				<td>7:05:05 pm</td>
+				<td>6:42:56 pm</td>
 				<td>
 						Testcase passed
 				</td>
@@ -672,19 +603,19 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">loginCRMDataProvider</p>
-							<p class="duration text-sm">0h 0m 1s+896ms</p>
-							<span class="datetime">19:05:12 pm</span>
+							<p class="name">statusOfProjects</p>
+							<p class="duration text-sm">0h 0m 3s+311ms</p>
+							<span class="datetime">18:43:01 pm</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">loginCRMDataProvider</h5>
-									<span class='badge badge-success'>02.12.2024 19:05:12</span>
-									<span class='badge badge-danger'>02.12.2024 19:05:14</span>
-									<span class='badge badge-default'>0h 0m 1s+896ms</span>
+									<h5 class="test-status text-pass">statusOfProjects</h5>
+									<span class='badge badge-success'>02.13.2024 18:43:01</span>
+									<span class='badge badge-danger'>02.13.2024 18:43:04</span>
+									<span class='badge badge-default'>0h 0m 3s+311ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -701,7 +632,7 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-check text-pass"></i></td>
-				<td>7:05:14 pm</td>
+				<td>6:43:04 pm</td>
 				<td>
 						Testcase passed
 				</td>
@@ -720,19 +651,19 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">loginCRMDataProvider</p>
-							<p class="duration text-sm">0h 0m 2s+814ms</p>
-							<span class="datetime">19:05:18 pm</span>
+							<p class="name">addTickets</p>
+							<p class="duration text-sm">0h 0m 3s+400ms</p>
+							<span class="datetime">18:43:08 pm</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">loginCRMDataProvider</h5>
-									<span class='badge badge-success'>02.12.2024 19:05:18</span>
-									<span class='badge badge-danger'>02.12.2024 19:05:21</span>
-									<span class='badge badge-default'>0h 0m 2s+814ms</span>
+									<h5 class="test-status text-pass">addTickets</h5>
+									<span class='badge badge-success'>02.13.2024 18:43:08</span>
+									<span class='badge badge-danger'>02.13.2024 18:43:12</span>
+									<span class='badge badge-default'>0h 0m 3s+400ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -749,7 +680,7 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-check text-pass"></i></td>
-				<td>7:05:21 pm</td>
+				<td>6:43:12 pm</td>
 				<td>
 						Testcase passed
 				</td>
@@ -757,126 +688,6 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 	</tbody>
 </table>
 </div>
-					</div>
-				</li>
-				<li class="test-item"  status="pass" test-id="13"
-					author=""
-					tag=""
-					device="">
-					<div class="status-avatar pass-bg">
-						<i class="fa fa-check text-white"></i>
-					</div>
-					<div class="open-test">
-						<div class="test-detail">
-							<p class="name">loginCRMDataProvider</p>
-							<p class="duration text-sm">0h 0m 1s+235ms</p>
-							<span class="datetime">19:05:26 pm</span>
-						</div>
-					</div>
-					<div class="test-contents d-none">
-						<div class="detail-head">
-							<div class="p-v-10 d-inline-block">
-								<div class="info">
-									<h5 class="test-status text-pass">loginCRMDataProvider</h5>
-									<span class='badge badge-success'>02.12.2024 19:05:26</span>
-									<span class='badge badge-danger'>02.12.2024 19:05:27</span>
-									<span class='badge badge-default'>0h 0m 1s+235ms</span>
-								</div>
-								<div class="m-t-10 m-l-5">
-									
-								</div>
-							</div>
-						</div>
-<div class="detail-body mt-4">                                              
-<table class="table table-sm">
-	<thead><tr>
-		<th class="status-col">Status</th>
-		<th class="timestamp-col">Timestamp</th>
-		<th class="details-col">Details</th>
-	</tr></thead>
-	<tbody>
-			<tr class="event-row">
-				<td><i class="fa fa-check text-pass"></i></td>
-				<td>7:05:27 pm</td>
-				<td>
-						Testcase passed
-				</td>
-			</tr>
-	</tbody>
-</table>
-</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class="test-content scrollable">
-		<div class="test-content-tools">
-			<ul>
-				<li>
-					<a class="back-to-test" href="javascript:void(0)">
-					<i class="fa fa-arrow-left"></i>
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div class="test-content-detail">
-			<div class="detail-body"></div>
-		</div>
-	</div>
-</div><div class="test-wrapper row exception-view attributes-view">
-	<div class="test-list">
-		<div class="test-list-tools">
-			<ul class="tools pull-left">
-				<li>
-					<a href="">
-					<span class="font-size-14">Exception</span>
-					</a>
-				</li>
-			</ul>
-			<ul class="tools text-right">
-				<li>
-					<a href="#">
-					<span class="badge badge-primary">1</span>
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div class="test-list-wrapper scrollable">
-			<ul class="test-list-item">
-				<li class="test-item">
-					<div class="open-test">
-						<div class="test-detail">
-							<p class="name">org.openqa.selenium.StaleElementReferenceException</p>
-							<p class="duration text-sm">1 tests</p>
-						</div>
-					</div>
-					<div class="test-contents d-none">
-						<div class="info">
-							<h4>org.openqa.selenium.StaleElementReferenceException</h4>
-						</div>
-						<table class='table table-sm mt-4'>
-							<thead>
-								<tr>
-									<th class="status-col">Status</th>
-									<th class="timestamp-col">Timestamp</th>
-									<th>TestName</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>
-										<div class='status-avatar fail-bg'>
-											<i class="fa fa-times text-white"></i>
-										</div>
-									</td>
-									<td>19:03:27 pm</td>
-									<td class='linked' test-id='2'>
-										addEvent
-									</td>
-								</tr>
-							</tbody>
-						</table>
 					</div>
 				</li>
 			</ul>
@@ -910,12 +721,12 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='92.308%'>
+					<div><small data-tooltip='100%'>
 						<b>12</b> tests passed
 						</small>
 					</div>
 					<div>
-						<small data-tooltip='7.692%'><b>1</b> tests failed, 
+						<small data-tooltip='0%'><b>0</b> tests failed, 
 						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 						</small>
 					</div>
@@ -933,9 +744,9 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='85.714%'><b>12</b> events passed</small></div>
+					<div><small data-tooltip='100%'><b>12</b> events passed</small></div>
 					<div>
-						<small data-tooltip='14.286%'><b>2</b> events failed, 
+						<small data-tooltip='0%'><b>0</b> events failed, 
 						<b data-tooltip='0%'>0</b> others
 						</small>
 					</div>
@@ -950,10 +761,10 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Tests</h6>
-							<h2 class="font-size-28 font-weight-light mt-3">13</h2>
+							<h2 class="font-size-28 font-weight-light mt-3">12</h2>
 							<span class="text-semibold text-success font-size-15">
 							<i class="ti-arrow-up font-size-11"></i> 
-							<span>92.31%</span>
+							<span>100.00%</span>
 							</span>
 						</div>
 						<div class="align-self-end">
@@ -969,7 +780,7 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Start</h6>
-							<h4 class="font-weight-light mt-4">Feb 12, 2024 07:03:07 pm</h4>
+							<h4 class="font-weight-light mt-4">Feb 13, 2024 06:41:41 pm</h4>
 							<span class="text-semibold text-success font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -985,7 +796,7 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Duration</h6>
-							<h4 class="font-weight-light mt-4">0h 2m 20s+133ms</h4>
+							<h4 class="font-weight-light mt-4">0h 1m 30s+914ms</h4>
 							<span class="text-semibold font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -1038,14 +849,14 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 </div>
 <script>
 	var statusGroup = {
-	    parentCount: 13,
+	    parentCount: 12,
 		passParent: 12,
-		failParent: 1,
+		failParent: 0,
 		fatalParent: 0,
 		errorParent: 0,
 		warningParent: 0,
 		skipParent: 0,
-		exceptionsParent: 1,
+		exceptionsParent: 0,
 		childCount: 0,
 		passChild: 0,
 		failChild: 0,
@@ -1066,9 +877,9 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 		infoGrandChild: 0,
 		debugGrandChild: 0,
 		exceptionsGrandChild: 0,
-		eventsCount: 14,
+		eventsCount: 12,
 		passEvents: 12,
-		failEvents: 2,
+		failEvents: 0,
 		fatalEvents: 0,
 		errorEvents: 0,
 		warningEvents: 0,
@@ -1080,7 +891,7 @@ Session ID: 7d4ea5a8d0871e62945ad5a80787e699
 </script>
 <script>
 	var timeline = {
-	        "loginCRM":2.072,"addEvent":6.605,"addClient":4.413,"downloadClientReport":3.5,"sendEMail":6.84,"verifyNumberOfTickets":2.32,"addNotes":5.259,"leaveApplications":4.463,"statusOfProjects":4.298,"addTickets":4.948,"loginCRMDataProvider":1.896,"loginCRMDataProvider":2.814,"loginCRMDataProvider":1.235
+	        "loginCRMDataProvider":1.284,"loginCRMDataProvider":1.033,"loginCRMDataProvider":0.97,"addEvent":5.142,"addClient":3.992,"downloadClientReport":2.861,"sendEMail":7.383,"verifyNumberOfTickets":2.643,"addNotes":3.168,"leaveApplications":3.418,"statusOfProjects":3.311,"addTickets":3.4
 	};
 </script>
                 </div>

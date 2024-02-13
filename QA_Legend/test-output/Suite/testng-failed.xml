@@ -11,7 +11,7 @@
         <methods>
           <include name="initialization"/>
           <include name="tearDown"/>
-          <include name="addEvent"/>
+          <include name="leaveApplications"/>
         </methods>
       </class> <!-- TestCases.QALegendTestCases -->
     </classes>

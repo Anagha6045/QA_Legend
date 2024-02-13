@@ -74,15 +74,26 @@ public class QALegendTestCases extends BaseClass
 	login_Page.loginButton();
 	}
 	
-	@Test(priority = 1)
-	public void loginCRM()
-	{
-		home_Page.logOut();
-		login_Page.enterUserName(prop.getProperty("username"));
-		login_Page.enterPassword(prop.getProperty("password"));
-		login_Page.loginButton();
-		org.testng.Assert.assertEquals(home_Page.getUserProfileName(), prop.getProperty("user_profile_name"));
-	}
+	@Test(priority = 1, dataProvider = "login_Details")
+	  public void loginCRMDataProvider(String userName,String passWord)
+		{
+			home_Page.logOut();
+			login_Page.enterUserName(userName);
+			login_Page.enterPassword(passWord);
+			login_Page.loginButton();
+			
+			String url=home_Page.getUrl();
+			
+			if (url.equalsIgnoreCase(prop.getProperty("url_of_dashboard")))
+			{
+				Assert.assertEquals(home_Page.getUserProfileName(),prop.getProperty("user_profile_name"));
+			}
+			else 
+			{
+				Assert.assertEquals(login_Page.getLogInPageTitle(), prop.getProperty("login_title"));
+			}
+			
+		}
 
 	@Test (priority = 2, groups = {"Smoke Test"})
 	public void addEvent() throws IOException 
@@ -293,26 +304,7 @@ public class QALegendTestCases extends BaseClass
 	  
 	  }
 	  
-	  @Test(priority = 11, dataProvider = "login_Details")
-	  public void loginCRMDataProvider(String userName,String passWord)
-		{
-			home_Page.logOut();
-			login_Page.enterUserName(userName);
-			login_Page.enterPassword(passWord);
-			login_Page.loginButton();
-			
-			String url=home_Page.getUrl();
-			
-			if (url.equalsIgnoreCase(prop.getProperty("url_of_dashboard")))
-			{
-				Assert.assertEquals(home_Page.getUserProfileName(),prop.getProperty("user_profile_name"));
-			}
-			else 
-			{
-				Assert.assertEquals(login_Page.getLogInPageTitle(), prop.getProperty("login_title"));
-			}
-			
-		}
+	 
 
 	  @DataProvider(name = "login_Details")
 	  public Object[][] testData() throws IOException 

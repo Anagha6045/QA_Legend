@@ -19,6 +19,9 @@ public class QALegend_LeavePage
 	@FindBy(xpath="//a[@title='Assign leave']")
 	WebElement button_AssignLeave;
 	
+	@FindBy(xpath="//span[@id='select2-chosen-3']")
+	WebElement leave_Field;
+	
 	@FindBy(id="leave_type_id")
 	WebElement inputField_LeaveTypeDropDown;
 	
@@ -79,10 +82,12 @@ public class QALegend_LeavePage
 	}
 	public void selectCasualLeave()
 	{
+		PageUtility.clickByJavaScript(leave_Field, driver);
 		PageUtility.clickOnElement(select_CasualLeave);
 	}
 	public void selectLeaveFromDropDown()
 	{
+		PageUtility.clickByJavaScript(leave_Field, driver);
 		WaitUtility.waitFowaitForAnElementToBeVisible(driver, inputField_LeaveTypeDropDown);
 		Select select =new Select(inputField_LeaveTypeDropDown);
 		select.selectByValue("1");

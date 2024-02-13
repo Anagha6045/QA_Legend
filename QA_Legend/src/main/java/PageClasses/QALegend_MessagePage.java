@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import Utilities.PageUtility;
+import Utilities.WaitUtility;
 
 public class QALegend_MessagePage
 {
@@ -31,10 +32,10 @@ public class QALegend_MessagePage
 	@FindBy(name = "to_user_id")
 	WebElement inputField_To;
 
-	/*
-	 * @FindBy(xpath = "//*[@id='select2-result-label-18']/text()") WebElement
-	 * inputFieldToAddress;
-	 */
+	
+	 @FindBy(xpath = "//span[@id='select2-chosen-3']") 
+	 WebElement field_To;
+	 
 	@FindBy(xpath = "//select[@name='to_user_id']")
 	WebElement inputFieldToAddress;
 	
@@ -108,7 +109,9 @@ public class QALegend_MessagePage
 	}
 	public void input_ToRecipient(String recipient) throws AWTException
 	{
-		PageUtility.clickOnElement(inputField_ToDropDown);
+		PageUtility.clickByJavaScript(inputField_ToDropDown,driver);
+		WaitUtility.waitFowaitForAnElementToBeVisible(driver, inputField_ToDropDown);
+		//PageUtility.clickByJavaScript(field_To, driver);
 		PageUtility.robotToField();
 
 	}
