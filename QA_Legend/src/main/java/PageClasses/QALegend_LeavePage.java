@@ -12,6 +12,8 @@ import Utilities.WaitUtility;
 public class QALegend_LeavePage 
 {
 	WebDriver driver;
+	PageUtility page_Utility = new PageUtility();
+	WaitUtility wait_Utility =new WaitUtility();
 	
 	@FindBy(xpath="//a[@title='Apply leave']")
 	WebElement button_ApplyLeave;
@@ -72,52 +74,52 @@ public class QALegend_LeavePage
 	
 	public void clickOnButtonApplyLeave()
 	{
-		PageUtility.clickOnElement(button_ApplyLeave);
+		button_ApplyLeave.click();
 	}
 	
 	public void clickOnDropDown()
 	{
-		WaitUtility.waitForAnElementToBeClickable(driver, clickDropDown);
-		PageUtility.clickOnElement(clickDropDown);
+		wait_Utility.waitForAnElementToBeClickable(driver, clickDropDown);
+		clickDropDown.click();
 	}
 	public void selectCasualLeave()
 	{
-		PageUtility.clickByJavaScript(leave_Field, driver);
-		PageUtility.clickOnElement(select_CasualLeave);
+		page_Utility.clickByJavaScript(leave_Field, driver);
+	    select_CasualLeave.click();
 	}
 	public void selectLeaveFromDropDown()
 	{
-		PageUtility.clickByJavaScript(leave_Field, driver);
-		WaitUtility.waitFowaitForAnElementToBeVisible(driver, inputField_LeaveTypeDropDown);
+		page_Utility.clickByJavaScript(leave_Field, driver);
+		wait_Utility.waitFowaitForAnElementToBeVisible(driver, inputField_LeaveTypeDropDown);
 		Select select =new Select(inputField_LeaveTypeDropDown);
 		select.selectByValue("1");
-		PageUtility.clickOnEnterKey(driver, inputField_LeaveTypeDropDown);
+		page_Utility.clickOnEnterKey(driver, inputField_LeaveTypeDropDown);
 		
 	}
 	public void durationSingleDay()
 	{
-		PageUtility.clickOnElement(select_DurationSingle);
+		select_DurationSingle.click();
 	}
 
 	public void clickOnSingleDateField()
 	{
-		PageUtility.clickOnElement(inputDate_OneDayLeave);
+		inputDate_OneDayLeave.click();
 	}
 	public void selectDateOfLeave()
 	{
-		PageUtility.clickOnElement(Leave_dateFrom);
+		Leave_dateFrom.click();
 	}
 	public void input_Reason(String reason)
 	{
-		PageUtility.enterText(inputField_Reason, reason);
+		page_Utility.enterText(inputField_Reason, reason);
 	}
 	public void submitApplyLeave()
 	{
-		PageUtility.clickOnElement(submit_ApplyLeave);
+	    submit_ApplyLeave.click();
 	}
 	public boolean isAbleToApplyLeave()
 	{
-		return PageUtility.isElementEnabled(submit_ApplyLeave);
+		return page_Utility.isElementEnabled(submit_ApplyLeave);
 	}
 	
 

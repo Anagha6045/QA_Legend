@@ -15,8 +15,9 @@ public class ExcelUtility
  public static XSSFWorkbook wb;
  public static XSSFSheet sh;
  public static FileInputStream f;
+ ExcelUtility excel_utility;
  
- public static String getString(int i, int j, String filePath,String sheet) throws IOException
+ public String getString(int i, int j, String filePath,String sheet) throws IOException
  {
 	 f =new FileInputStream(System.getProperty("user.dir")+ filePath);
 	 wb = new XSSFWorkbook(f);
@@ -27,7 +28,7 @@ public class ExcelUtility
 	 
  }
  
- public static String getNumeric(int i, int j, String filePath,String sheet) throws IOException
+ public String getNumeric(int i, int j, String filePath,String sheet) throws IOException
  {
 	 f =new FileInputStream(System.getProperty("user.dir")+ filePath);
 	 wb = new XSSFWorkbook(f);
@@ -38,7 +39,8 @@ public class ExcelUtility
 	 return String.valueOf(value);
 	 
  }
- public static ArrayList<String> getString(String filePath,String sheet) throws IOException
+ 
+ public  ArrayList<String> getString(String filePath,String sheet) throws IOException
  {
 	 f =new FileInputStream(System.getProperty("user.dir")+ filePath);
 	 wb = new XSSFWorkbook(f);
@@ -59,4 +61,11 @@ public class ExcelUtility
 	return excelRows;
  }
  
+ public int getRowCount(String excelFilePath, String sheet) throws IOException {
+      f =new FileInputStream(System.getProperty("user.dir")+ excelFilePath);
+    	 wb = new XSSFWorkbook(f);
+    	 sh = wb.getSheet(sheet);
+         return sh.getPhysicalNumberOfRows();
+     
+ }
 }

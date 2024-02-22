@@ -7,14 +7,14 @@ import java.util.Date;
 public class DateUtility
 {
 	
-	public static String getCurrentDate()
+	public  String getCurrentDate()
 	{
 		Date date=new Date();
 		SimpleDateFormat sdf=new SimpleDateFormat("mm/dd/yyyy");
 		String formatedDate = sdf.format(date);
 		return formatedDate;
 	}
-	public static String getCurrenttime() {
+	public  String getCurrenttime() {
 		Date date = new Date();
 		SimpleDateFormat stf = new SimpleDateFormat("hh:mm:aa");
 		String formatedTime = stf.format(date);
@@ -22,7 +22,7 @@ public class DateUtility
 		
 		
 	}
-	public static LocalDate getTommarowDate()
+	public  LocalDate getTommarowDate()
 	{
 		LocalDate today = LocalDate.now();
 		LocalDate tomorrow = today.plusDays(1);

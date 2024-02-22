@@ -7,9 +7,7 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.util.Iterator;
-
 import java.util.Set;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -22,109 +20,109 @@ public class PageUtility
 
 
 //browser commands
-public static void loadPage(WebDriver driver,String url)
+public  void loadPage(WebDriver driver,String url)
 {
  driver.get(url);
 }
-public static String getTitleOfThePage(WebDriver driver)
+public String getTitleOfThePage(WebDriver driver)
 {
 	return driver.getTitle();
 }
-public static String getUrlOfThePage(WebDriver driver)
+public String getUrlOfThePage(WebDriver driver)
 {
 	return driver.getCurrentUrl();
 }
-public static void closeTheTab(WebDriver driver)
+public  void closeTheTab(WebDriver driver)
 {
 	 driver.close();
 }
-public static void closeAllTabs(WebDriver driver)
+public void closeAllTabs(WebDriver driver)
 {
 	 driver.quit();
 }
 
 
 //navigation commands
-public static void navigateTo(WebDriver driver,String url)
+public  void navigateTo(WebDriver driver,String url)
 {
 	driver.navigate().to(url);
 }
-public static void navigateBack(WebDriver driver)
+public void navigateBack(WebDriver driver)
 {
 	driver.navigate().back();
 }
-public static void navigateForward(WebDriver driver)
+public void navigateForward(WebDriver driver)
 {
 	driver.navigate().forward();
 }
-public static void refreshPage(WebDriver driver)
+public void refreshPage(WebDriver driver)
 {
 	driver.navigate().refresh();
 }
 
 
 //webElement commands
-public static void ClearTheField(WebElement element)
+public void ClearTheField(WebElement element)
 {
 	element.clear();
 }
 
-public static void clickOnElement(WebElement element)
+public void clickOnElement(WebElement element)
 {
 	element.click();
 }
-public static void enterText(WebElement element, String value)
+public void enterText(WebElement element, String value)
 {
 	element.sendKeys(value);
 }
-public static void enterNumber(WebElement element, CharSequence[] value)
+public void enterNumber(WebElement element, CharSequence[] value)
 {
 	element.sendKeys(value);
 	
 }
-public static boolean isElementDisplayed(WebElement element)
+public boolean isElementDisplayed(WebElement element)
 {
 	return element.isDisplayed();
 }
-public static boolean isElementEnabled(WebElement element)
+public boolean isElementEnabled(WebElement element)
 {
 	return element.isEnabled();
 }
-public static boolean isElementSelected(WebElement element)
+public boolean isElementSelected(WebElement element)
 {
 	return element.isSelected();
 }
-public static void submitPage(WebElement element)
+public void submitPage(WebElement element)
 {
  element.submit();
 }
 
-public static String getTextFromElement(WebElement element)
+public String getTextFromElement(WebElement element)
 {
 	return element.getText();
 }
 
-public static String getAttributeValue(WebElement element,String attributeName)
+public String getAttributeValue(WebElement element,String attributeName)
 {
 	return element.getAttribute(attributeName);
 }
-public static String getTagnameElement(WebElement element)
+public String getTagnameElement(WebElement element)
 {
 	return element.getTagName();
 }
 
 //dropdown
-public static void selectDropDownByIndex(WebElement element, int indexValue)
+public void selectDropDownByIndex(WebElement element, int indexValue)
 {
 	Select obj= new Select(element);
 	obj.selectByIndex(indexValue);
 }
-public static void selectDropDownByValue(WebElement element, String Value)
+public void selectDropDownByValue(WebElement element, String Value)
 {
 	Select obj= new Select(element);
 	obj. selectByValue(Value);
 }
-public static void selectDropDownByText(WebElement element, String Value)
+public void selectDropDownByText(WebElement element, String Value)
 {
 	Select obj= new Select(element);
 	obj. selectByVisibleText(Value);
@@ -132,34 +130,34 @@ public static void selectDropDownByText(WebElement element, String Value)
 
 
 //alerts
-public static void acceptAlert(WebDriver driver)
+public void acceptAlert(WebDriver driver)
 {
 	driver.switchTo().alert().accept();
 }
-public static void dismissAlert(WebDriver driver)
+public void dismissAlert(WebDriver driver)
 {
 	driver.switchTo().alert(). dismiss();
 }
-public static String getAlertMessage(WebDriver driver)
+public String getAlertMessage(WebDriver driver)
 {
 	return driver.switchTo().alert().getText();
 }
-public static void getAlertMessage(WebDriver driver, String inputMessage)
+public void getAlertMessage(WebDriver driver, String inputMessage)
 {
 	driver.switchTo().alert().sendKeys(inputMessage);
 }
 
 
 //Frames
-public static void selectFrameByNumber(WebDriver driver, int frameNumber)
+public void selectFrameByNumber(WebDriver driver, int frameNumber)
 {
 	driver.switchTo().frame(frameNumber);
 }
-public static void selectFrameByNameId(WebDriver driver, String frameNameId)
+public void selectFrameByNameId(WebDriver driver, String frameNameId)
 {
 	driver.switchTo().frame(frameNameId);
 }
-public static void selectFrameByWebElement(WebDriver driver, WebElement element)
+public void selectFrameByWebElement(WebDriver driver, WebElement element)
 {
 	driver.switchTo().frame(element);
 }
@@ -167,93 +165,93 @@ public static void selectFrameByWebElement(WebDriver driver, WebElement element)
 
 //Action class
 
-public static void ClickOnElement(WebDriver driver,WebElement element)
+public void ClickOnElement(WebDriver driver,WebElement element)
 {
 	Actions actions= new Actions(driver);
 	actions.click(element).build().perform();
 }
-public static void ClickAndHoldOnElement(WebDriver driver,WebElement element)
+public void ClickAndHoldOnElement(WebDriver driver,WebElement element)
 {
 	Actions actions= new Actions(driver);
 	actions.clickAndHold(element).build().perform();
 }
-public static void LeftClick(WebDriver driver)
+public void LeftClick(WebDriver driver)
 {
 	Actions actions= new Actions(driver);
 	actions.click().build().perform();
 }
-public static void OnclickAndHold(WebDriver driver)
+public void OnclickAndHold(WebDriver driver)
 {
 	Actions actions= new Actions(driver);
 	actions.clickAndHold().build().perform();
 }
 
-public static void doubleClick(WebDriver driver)
+public void doubleClick(WebDriver driver)
 {
 	Actions actions= new Actions(driver);
 	actions.doubleClick().build().perform();
 }
-public static void doubleClickOnElement(WebDriver driver,WebElement element)
+public void doubleClickOnElement(WebDriver driver,WebElement element)
 {
 	Actions actions= new Actions(driver);
 	actions.doubleClick(element).build().perform();
 }
-public static void rightClick(WebDriver driver)
+public void rightClick(WebDriver driver)
 {
 	Actions actions= new Actions(driver);
 	actions.contextClick().build().perform();
 }
-public static void rightClickOnElement(WebDriver driver,WebElement element)
+public void rightClickOnElement(WebDriver driver,WebElement element)
 {
 	Actions actions= new Actions(driver);
 	actions.contextClick(element).build().perform();
 }
-public static void moveToElement(WebDriver driver, WebElement element) 
+public void hoverOverToElement(WebDriver driver, WebElement element) 
 {
     Actions actions = new Actions(driver);
     actions.moveToElement(element).build().perform();
 }
-public static void dragAndDropElement(WebDriver driver, WebElement fromLocation,WebElement toLocation) 
+public void dragAndDropElement(WebDriver driver, WebElement fromLocation,WebElement toLocation) 
 {
     Actions actions = new Actions(driver);
     actions.dragAndDrop(fromLocation,toLocation).build().perform();
 }
-public static void releaseElement(WebDriver driver,WebElement element)
+public void releaseElement(WebDriver driver,WebElement element)
 {
 	Actions actions = new Actions(driver);
 	actions.release(element);
 	
 }
-public static void clickOnEnterKey(WebDriver driver,WebElement element)
+public void clickOnEnterKey(WebDriver driver,WebElement element)
 {
 	Actions actions = new Actions(driver);
 	actions.sendKeys(Keys.ENTER).build().perform();
 }
-public static void clickOnPageUp(WebDriver driver)
+public void clickOnPageUp(WebDriver driver)
 {
 	Actions actions = new Actions(driver);
 	actions.sendKeys(Keys.ARROW_UP).build().perform();
 }
-public static void clickOnPageDown(WebDriver driver)
+public void clickOnPageDown(WebDriver driver)
 {
 	Actions actions = new Actions(driver);
 	actions.sendKeys(Keys.ARROW_DOWN).build().perform();
 }
-public static void clickOn(WebDriver driver,String value)
+public void clickOn(WebDriver driver,String value)
 {
 	Actions actions = new Actions(driver);
 	actions.sendKeys(Keys.valueOf(value)).build().perform();
 }
 
 
-public static void singleTabHandling(WebDriver driver,WebElement element)
+public void singleTabHandling(WebDriver driver,WebElement element)
 {
 	driver.getWindowHandle();
 }
 
 
 // how to handle window
-public static void multipleTabHandling(WebDriver driver)
+public void multipleTabHandling(WebDriver driver)
 {
 	Set<String> handles=driver.getWindowHandles();
 	Iterator<String>iterate=handles.iterator();
@@ -264,43 +262,54 @@ while(iterate.hasNext())
 }
 	
 }
-public static void switchTab(WebDriver driver, String handle)
+public void switchTab(WebDriver driver, String handle)
 {
 	driver.switchTo().window(handle);
+}
+//select
+public void dropDown_SelectByValue(WebElement element, String value)
+{
+	Select select= new Select(element);
+	select.selectByValue(value);
+}
+public void dropDown_SelectByDisplayedOptions(WebElement element, String value)
+{
+	Select select= new Select(element);
+	select.selectByVisibleText(value);
 }
 
 
 // javascript executor
-public static void scrollThePage(WebElement element,WebDriver driver)
+public void scrollThePage(WebElement element,WebDriver driver)
 {
 	
 	JavascriptExecutor jse = (JavascriptExecutor)driver;
 	jse.executeScript("arguments[0].scrollIntoView(true)", element);
 }
 
-public static void scrollToBottom(WebDriver driver, int percentScroll) 
+public void scrollToBottom(WebDriver driver, int percentScroll) 
 {    
 	JavascriptExecutor jse = (JavascriptExecutor)driver;
 	jse.executeScript("window.scrollBy(0,1000)","");
 }
 
-    public static void clickByJavaScript(WebElement element, WebDriver driver) 
+    public void clickByJavaScript(WebElement element, WebDriver driver) 
 {
 	JavascriptExecutor jse = (JavascriptExecutor)driver;
 	jse.executeScript("arguments[0].click();", element);
 }
-    public static void enterTextByJavaScript(WebDriver driver,WebElement element, String input)
+    public void enterTextByJavaScript(WebDriver driver,WebElement element, String input)
     {
     	JavascriptExecutor jse = (JavascriptExecutor)driver;
     	jse.executeScript("arguments[0].scrollIntoView(true);", element);
         element.sendKeys(input);
     }
-    public static String capturePropmptAlert(WebDriver driver)
+    public String capturePropmptAlert(WebDriver driver)
     {
     	System.out.println(driver.switchTo().alert().getText());
     	return driver.switchTo().alert().getText();	
     }
-	public static void fileUpload(WebElement element, String path) throws AWTException
+	public void fileUpload(WebElement element, String path) throws AWTException
 	{
 		StringSelection s=new StringSelection(path);
 		 
@@ -318,7 +327,7 @@ public static void scrollToBottom(WebDriver driver, int percentScroll)
 		
 	}
     
-	public static void windowHandling(WebDriver driver)
+	public void windowHandling(WebDriver driver)
 	{
 		driver.getWindowHandle();
 		Set<String> handles = driver.getWindowHandles();
@@ -327,12 +336,12 @@ public static void scrollToBottom(WebDriver driver, int percentScroll)
 		String childtab = it.next();
 		driver.switchTo().window(childtab);
 	}
-    public static void switchWindowToParentTab(WebDriver driver)
+    public void switchWindowToParentTab(WebDriver driver)
     {
     	driver.switchTo().defaultContent();
     }
 
-    public static void robotSearchClient() throws AWTException
+    public void robotSearchClient() throws AWTException
     {
     	Robot robot= new Robot();
     	robot.keyPress(KeyEvent.VK_A);
@@ -348,7 +357,7 @@ public static void scrollToBottom(WebDriver driver, int percentScroll)
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
     }
-    public static void robotToField() throws AWTException
+    public void robotToField() throws AWTException
     {
     	Robot robot= new Robot();
     	robot.keyPress(KeyEvent.VK_S);

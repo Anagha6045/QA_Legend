@@ -15,6 +15,8 @@ import Utilities.WaitUtility;
 public class QALegend_MessagePage
 {
 	WebDriver driver;
+	PageUtility page_Utility = new PageUtility();
+	WaitUtility wait_Utility =new WaitUtility();
 	
 	@FindBy(xpath = "//a[@title='Send message']")
 	WebElement button_Compose;
@@ -72,66 +74,65 @@ public class QALegend_MessagePage
 	
 	public void clickOnCompose()
 	{
-		PageUtility.clickOnElement(button_Compose);
+		button_Compose.click();
 	}
 	
 	
 	public void clickOnInbox()
 	{
-		PageUtility.clickOnElement(button_Inbox);
+		button_Inbox.click();
 	}
 	
 	public void input_ToField(String recipient)
 	{
-		PageUtility.clickOnElement(inputField_To);
-		PageUtility.enterText( inputField_ToSearch, recipient);
-	    PageUtility.clickOnEnterKey(driver, inputField_ToSearch);
+		inputField_To.click();
+		inputField_ToSearch.sendKeys(recipient);
+		page_Utility.clickOnEnterKey(driver, inputField_ToSearch);
 	}
 
 	
 	public void input_Subject(String subject)
 	{
-		PageUtility.enterText(inputField_Subject, subject);
+		inputField_Subject.sendKeys(subject);
 	}
 	
 	public void input_Message(String message)
 	{
-		PageUtility.enterText(inputField_Message, message);
+		inputField_Message.sendKeys(message);
 	}
 	public void attachFile(String attachment) throws AWTException
 	{ 
 		
-		PageUtility.fileUpload(buttonUpload, attachment);
+		page_Utility.fileUpload(buttonUpload, attachment);
 	}
 	public void sendMessage()
 	{
-		PageUtility.clickOnElement(buttonSend);
+		buttonSend.click();
 	}
 	public void input_ToRecipient(String recipient) throws AWTException
 	{
-		PageUtility.clickByJavaScript(inputField_ToDropDown,driver);
-		WaitUtility.waitFowaitForAnElementToBeVisible(driver, inputField_ToDropDown);
-		//PageUtility.clickByJavaScript(field_To, driver);
-		PageUtility.robotToField();
+		page_Utility.clickByJavaScript(inputField_ToDropDown,driver);
+		wait_Utility.waitFowaitForAnElementToBeVisible(driver, inputField_ToDropDown);
+		page_Utility.robotToField();
 
 	}
 	public void clickOnSentItems()
 	{
-		PageUtility.clickByJavaScript(button_SentItems,driver);
+		page_Utility.clickByJavaScript(button_SentItems,driver);
 	}
 	
 	  public void toField()
 	  {
-	  PageUtility.moveToElement(driver, toField);
-	  PageUtility.clickOnEnterKey(driver, toField);
-	  Select select= new Select(inputFieldToAddress);
-		select.selectByValue("33");
+		  page_Utility.hoverOverToElement(driver, toField);
+		  page_Utility.clickOnEnterKey(driver, toField);
+		  page_Utility.dropDown_SelectByValue(inputFieldToAddress,"33");
+
 	  }
 
 	public boolean isSubjectVisible()
 	{
 		
-		return PageUtility.isElementDisplayed(selectFirstRecipient);
+		return page_Utility.isElementDisplayed(selectFirstRecipient);
 	}
 	 
 }

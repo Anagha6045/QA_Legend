@@ -17,6 +17,8 @@ public class QALegend_NotePage
 {
 	
 	WebDriver driver;
+	PageUtility page_Utility = new PageUtility();
+	WaitUtility wait_Utility =new WaitUtility();
 	
 @FindBy(xpath = "//span[text()='Notes']")
 WebElement notesButton;
@@ -42,29 +44,29 @@ public QALegend_NotePage(WebDriver driver) {
 
 public void clickOnNotesButton()
 {
-	PageUtility.clickOnElement(notesButton);
+	notesButton.click();
 }
 
 public void clickOnAddNotesButton() 
 {
-	PageUtility.clickOnElement(addNotesButton);
+	addNotesButton.click();
 }
 public String enterTitleInAddNotesPopUp(String textTitle) throws IOException 
 {
-	 PageUtility.enterText(enterTitle,textTitle);
+	 enterTitle.sendKeys(textTitle);
 	 return textTitle;
 	
 }
 public void clickOnSave()
 {
-	PageUtility.clickOnElement(saveButton);
+	saveButton.click();
 }
 
 public String getActualTitle()
 {
-	PageUtility.refreshPage(driver);
-	WaitUtility.waitForAnElementToBeClickable(driver, actualTitle);
-	return PageUtility.getTextFromElement(actualTitle);
+	page_Utility.refreshPage(driver);
+	wait_Utility.waitForAnElementToBeClickable(driver, actualTitle);
+	return page_Utility.getTextFromElement(actualTitle);
 }
 
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods" name="Failed suite [Parallel Test Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="Browser" value="Chrome"/>
+  <listeners>
+    <listener class-name="TestCases.Listeners"/>
+  </listeners>
+  <test thread-count="2" parallel="methods" name="Test(failed)">
+    <classes>
+      <class name="TestCases.QALegendTestCases">
+        <methods>
+          <include name="verifyNumberOfTickets"/>
+          <include name="isEventAdded"/>
+          <include name="initialization"/>
+          <include name="canUseraddTickets"/>
+          <include name="tearDown"/>
+          <include name="mandatoryFieldCheckClientCompany"/>
+          <include name="isAddedProjectViewable"/>
+          <include name="isAddedNotesDisplayed"/>
+          <include name="sendEmail"/>
+          <include name="downloadClientReport"/>
+          <include name="userCanApplyForLeave"/>
+        </methods>
+      </class> <!-- TestCases.QALegendTestCases -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Parallel Test Suite] -->

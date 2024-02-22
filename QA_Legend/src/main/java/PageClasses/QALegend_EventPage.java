@@ -16,6 +16,8 @@ public class QALegend_EventPage
 {
 
 	WebDriver driver;
+	PageUtility page_Utility = new PageUtility();
+	WaitUtility wait_Utility =new WaitUtility();
 	
 	@FindBy(xpath = "//a[text()=' Add event']")
 	WebElement buttonAdd_event;
@@ -47,7 +49,7 @@ public class QALegend_EventPage
 	@FindBy(xpath = "//div[@class='fc-event-container']//a[last()]")
 	WebElement startDateGridline;
 	
-	@FindBy(xpath = "//h4[text()='Event details']")
+	@FindBy(xpath = "//h4[text()='Demo CRM']")
 	WebElement eventTitlefromPage;
 	
 	@FindBy(id = "//input[starts-with(@id,'s2id')][1]")
@@ -80,91 +82,88 @@ public class QALegend_EventPage
 	
 	public void clickOnAddEvent() 
 	{
-		PageUtility.clickOnElement(buttonAdd_event);
+		page_Utility.clickByJavaScript(buttonAdd_event, driver);
+	
 	}
 	public boolean IsAddEventClickable() 
 	{
-		return PageUtility.isElementEnabled(buttonAdd_event);
+		return page_Utility.isElementEnabled(buttonAdd_event);
 		
 	}
 	public String addEventTitle() 
 	{
-		return PageUtility.getTextFromElement(addEventPopUpTitle);
+		return page_Utility.getTextFromElement(addEventPopUpTitle);
 		
 	}
 	public void inputTitle(String title)
 	{
-		PageUtility.enterText(inputField_Title, title);
+		page_Utility.enterText(inputField_Title, title);
 	}
 	public void inputDescription(String description)
 	{
-		PageUtility.enterText(inputField_Description, description);
+		page_Utility.enterText(inputField_Description, description);
 	}
 	public void inputEventLabel(String label)
 	{
-		PageUtility.enterText(inputField_Description,label);
+		page_Utility.enterText(inputField_Description,label);
 	}
 	 public void inputStartDate()
      {
-	   PageUtility.clickOnElement(inputField_Start_date);
+	   inputField_Start_date.click();
 	 }
 	
 	 public void selectStartDate()
 	 {
-		 PageUtility.clickOnElement(startDateCurrent_date);
+		startDateCurrent_date.click();
 	 }
 	 public void inputEndDate()
      {
-	   PageUtility.clickOnElement(inputField_End_date);
+	  inputField_End_date.click();
 	 }
 	 public void selectEndDate()
 	 {
-		 PageUtility.clickOnElement(endDateFirst_Next);
+		 endDateFirst_Next.click();
 	 }
 	 public void inputLocation(String location)
 	 {
 		
-		 PageUtility.enterText(inputFieldLocation, location);
+		 page_Utility.enterText(inputFieldLocation, location);
 	 }
 	 public void inputLabel(String label)
 	 {
-		 WaitUtility.waitForAnElementToBeClickable(driver, inputField_Label);
-		 PageUtility.clickOnEnterKey(driver, inputField_Label);
-		 PageUtility.enterText(inputField_Label, label);
+		 wait_Utility.waitForAnElementToBeClickable(driver, inputField_Label);
+		 page_Utility.clickOnEnterKey(driver, inputField_Label);
+		 page_Utility.enterText(inputField_Label, label);
 	 }
 
 	 public void inputClientField(String client)
 	 {
-		 WaitUtility.waitForAnElementToBeClickable(driver, inputField_Label);
-		 PageUtility.clickOnElement(clientFieldDropDown);
+		 wait_Utility.waitForAnElementToBeClickable(driver, inputField_Label);
+		 page_Utility.clickOnElement(clientFieldDropDown);
 		 
 		 
 		 
 	 }
 	 public void searchForClient(String client)
 	 {
-		 System.out.println(clientField_SearchBox.isEnabled());
-		 System.out.println(clientField_SearchBox.isDisplayed());
-		 System.out.println(clientField_SearchBox.isEnabled());
-		 WaitUtility.waitForAnElementToBeClickable(driver, clientField_SearchBox);
-		
-		 
-		 PageUtility.enterText(clientField_SearchBox, client);
+
+		 wait_Utility.waitForAnElementToBeClickable(driver, clientField_SearchBox);
+		 page_Utility.enterText(clientField_SearchBox, client);
 		
 	 }
 	 
 	 public void shareWithField()
 	 {
-		 PageUtility.clickOnElement(shareWithField_Radio);
+		 shareWithField_Radio.click();
 	 }
 	 public void selectThemeColor()
 	 {
-		 PageUtility.clickOnElement(eventThemeColor);
+		 eventThemeColor.click();
 	 }
 	 
 	public void clickOnSave()
 	{
-		PageUtility.submitPage(SaveButton);
+		page_Utility.submitPage(SaveButton);
 	}
 	public void scrollThePage()
 	{
@@ -172,17 +171,17 @@ public class QALegend_EventPage
 	}
 	public void clickOnDayButton()
 	{
-		WaitUtility.waitForAnElementToBeClickable(driver, dayButton);
-		PageUtility.clickByJavaScript(dayButton,driver);
+		wait_Utility.waitForAnElementToBeClickable(driver, dayButton);
+		page_Utility.clickByJavaScript(dayButton,driver);
 	}
    
 	public void clickOnEventGrid()
 	{
-		PageUtility.clickByJavaScript(startDateGridline, driver);
+		page_Utility.clickByJavaScript(startDateGridline, driver);
 	}
 	public boolean getEventTitle()
 	{
-		return PageUtility.isElementDisplayed(eventTitlefromPage);
+		return page_Utility.isElementDisplayed(eventTitlefromPage);
 	}
 	
 	

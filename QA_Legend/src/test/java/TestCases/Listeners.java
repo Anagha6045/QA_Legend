@@ -16,10 +16,11 @@ import Utilities.ExtendReportNG;
 
 public class Listeners extends BaseClass implements ITestListener
 {
- //WebDriver driver;
  ExtentTest test;
- ExtentReports extent = ExtendReportNG.getReportObject();
+ ExtendReportNG extentReport= new ExtendReportNG();
+ ExtentReports extent= extentReport.getReportObject();
  ThreadLocal<ExtentTest> extentTest= new ThreadLocal<ExtentTest>(); // To discriminate between test cases while parallel testing so that result wont get mixed up 
+ 
  
 	@Override
 	public void onTestStart(ITestResult result) {
@@ -53,7 +54,7 @@ public class Listeners extends BaseClass implements ITestListener
 		  
 		 try {
 			 
-			driver =(WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
+			 driver =(WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
 			
 			
 			
@@ -63,12 +64,13 @@ public class Listeners extends BaseClass implements ITestListener
 		}//by heart 
 		  
 		
+		
 		  try {
-			extentTest.get().addScreenCaptureFromPath(getScreenShotPath(testMethodName,driver), result.getMethod().getMethodName());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
+				extentTest.get().addScreenCaptureFromPath(getScreenShotPath(testMethodName,driver), result.getMethod().getMethodName());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
 		  
 		extentTest.get().log(Status.FAIL, "Testcase Failed");
 		

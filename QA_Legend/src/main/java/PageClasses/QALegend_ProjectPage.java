@@ -15,6 +15,8 @@ import Utilities.WaitUtility;
 public class QALegend_ProjectPage
 {
 	WebDriver driver;
+	PageUtility page_Utility = new PageUtility();
+	WaitUtility wait_Utility =new WaitUtility();
 
 	@FindBy(xpath = "//a[@title='Add project']")
 	WebElement addProjectButton;
@@ -101,84 +103,81 @@ public class QALegend_ProjectPage
  
 	public void clickOnAddProjectButton()
 	{
-		PageUtility.clickOnElement(addProjectButton);
+		addProjectButton.click();
 	}
 	public void inputTitle(String title)
 	{
-		PageUtility.enterText(input_FieldTitle,title);
+		input_FieldTitle.sendKeys(title);
 	}
 	public void inputClient()
 	{
-		PageUtility.clickOnElement(dropdownIcon);
+		dropdownIcon.click();
 	}
 	public void selectFromDropDown(String company) throws AWTException
 	{
-		PageUtility.clickByJavaScript(click_ClientField,driver);
-	//	PageUtility.scrollThePage(inputSearch_Client, driver);
-		PageUtility.clickByJavaScript(inputSearch_Client,driver);
-		PageUtility.robotSearchClient();
+		page_Utility.clickByJavaScript(click_ClientField,driver);
+		page_Utility.clickByJavaScript(inputSearch_Client,driver);
+		page_Utility.robotSearchClient();
 	}
 	public void inputDescription(String description)
 	{
-		PageUtility.enterText(input_Description, description);
+		input_Description.sendKeys(description) ;
 	}
 	public void input_StartDate()
 	{
-		PageUtility.clickOnElement(inputField_StartDate);
-		PageUtility.clickOnElement(start_DateFrom);
+		inputField_StartDate.click();
+		start_DateFrom.click();
 	}
 	public void input_Deadline()
 	{
-		PageUtility.clickOnElement(inputField_EndDate);
-		PageUtility.clickOnElement(end_DateTo);
+		inputField_EndDate.click();
+		end_DateTo.click();
 	}
 	public void inputPrice(String price)
 	{
-		PageUtility.enterText(inputField_Price, price);
+		inputField_Price.sendKeys(price);
 	}
 	public void inputLabel(String label)
 	{
-		PageUtility.scrollToBottom(driver, -100);
-		PageUtility.clickByJavaScript(inputField_ProjectLabels,driver);
-		PageUtility.enterText(inputField_ProjectLabels, label);
+		page_Utility.scrollToBottom(driver, -100);
+		page_Utility.clickByJavaScript(inputField_ProjectLabels,driver);
+		page_Utility.enterText(inputField_ProjectLabels, label);
 	}
 	public void saveProject()
 	{
-		PageUtility.clickOnElement(buttonSave);
+		buttonSave.click();
 	}
 	public void filterByOpenStatus()
 	{
 
-		WaitUtility.waitForAnElementToBeClickable(driver, status);
-		PageUtility.clickByJavaScript(status,driver);
-		PageUtility.clickByJavaScript(statusOpen,driver);
+		wait_Utility.waitForAnElementToBeClickable(driver, status);
+		page_Utility.clickByJavaScript(status,driver);
+		page_Utility.clickByJavaScript(statusOpen,driver);
 	}
 	
 	public void filterByCompletedStatus()
 	{
-		PageUtility.clickByJavaScript(status,driver);
-		PageUtility.clickByJavaScript(statusOpen,driver);
-		//WaitUtility.waitForAnElementToBeClickable(driver, statusCompleted);
-		
-		PageUtility.clickByJavaScript(statusCompleted,driver);
+		page_Utility.clickByJavaScript(status,driver);
+		page_Utility.clickByJavaScript(statusOpen,driver);
+		page_Utility.clickByJavaScript(statusCompleted,driver);
 	}
 	public void filterByHoldStatus()
 	{
-		PageUtility.clickByJavaScript(status,driver);
-		PageUtility.clickByJavaScript(statusCompleted,driver);
-		PageUtility.clickByJavaScript(statusHold,driver);
+		page_Utility.clickByJavaScript(status,driver);
+		page_Utility.clickByJavaScript(statusCompleted,driver);
+		page_Utility.clickByJavaScript(statusHold,driver);
 	}
 	public void filterByCanceledStatus()
 	{
-		PageUtility.clickByJavaScript(status,driver);
-		PageUtility.clickByJavaScript(statusHold,driver);
-		PageUtility.clickByJavaScript(statusCanceled,driver);
+		page_Utility.clickByJavaScript(status,driver);
+		page_Utility.clickByJavaScript(statusHold,driver);
+		page_Utility.clickByJavaScript(statusCanceled,driver);
 	}
 	public void searchProject(String projectName)
 	{
-		WaitUtility.waitFowaitForAnElementToBeVisible(driver, searchProject);
-		PageUtility.clickByJavaScript(searchProject,driver);
-		PageUtility.enterTextByJavaScript(driver,searchProject, projectName);
+		wait_Utility.waitFowaitForAnElementToBeVisible(driver, searchProject);
+		page_Utility.clickByJavaScript(searchProject,driver);
+		page_Utility.enterTextByJavaScript(driver,searchProject, projectName);
 		
 	}
 	public boolean addedProjectDisplayed()
@@ -187,19 +186,19 @@ public class QALegend_ProjectPage
 	}
 	public void clickOnDeleteProject()
 	{
-		PageUtility.clickByJavaScript(deleteProject,driver);
+		page_Utility.clickByJavaScript(deleteProject,driver);
 	}
 	public void clickOnAlertCancel()
 	{
-		PageUtility.clickOnElement(cancelDelete);
+		cancelDelete.click();
 	}
 	public void clickOnAlertDelete()
 	{
-		PageUtility.clickOnElement(deleteButton);
+		deleteButton.click();
 	}
 	public String getDeleteWarning() throws InterruptedException
 	{
-		Thread.sleep(3000);
+		
 		return driver.switchTo().alert().getText();
 		
 	}

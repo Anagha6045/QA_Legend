@@ -12,6 +12,7 @@ import Utilities.PageUtility;
 public class QALegend_ClientPage
 {
 	WebDriver driver;
+	PageUtility page_Utility = new PageUtility();
 
 	@FindBy(xpath = "//a[text()=' Add client']")
 	WebElement buttonAdd_client;
@@ -81,79 +82,78 @@ public class QALegend_ClientPage
 
 	public void clickOnAddClient() 
 	{
-		PageUtility.clickOnElement(buttonAdd_client);
+		page_Utility.clickOnElement(buttonAdd_client);
 	}
 	public boolean IsAddEventClickable() 
 	{
-		return PageUtility.isElementEnabled(buttonAdd_client);
+		return page_Utility.isElementEnabled(buttonAdd_client);
 		
 	}
 	public String addEventTitle() 
 	{
-		return PageUtility.getTextFromElement(addClientPopUpTitle);
+		return page_Utility.getTextFromElement(addClientPopUpTitle);
 		
 	}
 	public void inputCompanyName(String companyName)
 	{
-		PageUtility.scrollThePage(inputField_CompanyName, driver);
-		PageUtility.enterText(inputField_CompanyName, companyName);
+		page_Utility.scrollThePage(inputField_CompanyName, driver);
+		page_Utility.enterText(inputField_CompanyName, companyName);
 	}
 	
 	public void inputAddress(String address)
 	{
-		PageUtility.enterText(inputField_Address, address);
+		page_Utility.enterText(inputField_Address, address);
 	}
 	
 	public void inputCity(String label)
 	{
-		PageUtility.enterText(inputField_City,label);
+		page_Utility.enterText(inputField_City,label);
 	}
 
 	 public void inputState(String state)
 	 {
 		
-		 PageUtility.enterText(inputField_State, state);
+		 page_Utility.enterText(inputField_State, state);
 	 }
 	 public void inputZip(String string)
 	 {
 		
-		 PageUtility.enterText(inputField_Zip, string);
+		 page_Utility.enterText(inputField_Zip, string);
 	 }
 	 public void inputCountry(String country)
 	 {
 		
-		 PageUtility.enterText(inputField_Country, country);
+		 page_Utility.enterText(inputField_Country, country);
 	 }
 	 
 	public void inputPhone(String phone)
 	 {
 			
-			 PageUtility.enterText(inputField_Phone, phone);
+		page_Utility.enterText(inputField_Phone, phone);
      }
 	public void inputWebsite(String website)
 	 {
 			
-			 PageUtility.enterText(inputField_Website, website);
+		page_Utility.enterText(inputField_Website, website);
     }
 	public void inputVAT(String vatNumber)
 	 {
 			
-			 PageUtility.enterText(inputField_VAT, vatNumber);
-			 PageUtility.scrollThePage(inputField_VAT, driver);
+		page_Utility.enterText(inputField_VAT, vatNumber);
+		page_Utility.scrollThePage(inputField_VAT, driver);
    }
 	public void inputClientGroups(String client)
 	 {
-            PageUtility.scrollThePage(inputField_ClientGroups, driver);
-			PageUtility.enterText(inputField_ClientGroups,client);
+		page_Utility.scrollThePage(inputField_ClientGroups, driver);
+		page_Utility.enterText(inputField_ClientGroups,client);
     }
 	public void button_Save()
 	 {
-			
-			 PageUtility.clickOnElement(button_Save);
+			 button_Save.click();
      }
 	public String addClientTitle() 
 	{
-		return PageUtility.getTextFromElement(addClientPopUpTitle);
+		return page_Utility.getTextFromElement(addClientPopUpTitle);
 		
 	}
    public String mandatoryMessage()
@@ -162,31 +162,31 @@ public class QALegend_ClientPage
    }
 	public void searchForClient(String client)
 	{
-		PageUtility.clickOnElement(searchForSavedClients);
-		PageUtility.enterText(searchForSavedClients,client);
-		PageUtility.clickOnEnterKey(driver,searchForSavedClients);
+		page_Utility.clickOnElement(searchForSavedClients);
+		page_Utility.enterText(searchForSavedClients,client);
+		page_Utility.clickOnEnterKey(driver,searchForSavedClients);
 	}
 	public void downloadExcelReport()
 	{
-	PageUtility.clickOnElement(excelDownload);
+		excelDownload.click();
 	}
 	public void printExcelReport()
 	{
-		PageUtility.clickOnElement(printClientReport);
+		printClientReport.click();
 	}
 	
 	
 	public void windowHandle()
 	{
-		PageUtility.windowHandling(driver);
+		page_Utility.windowHandling(driver);
 	}
 	public void switchToDefault()
 	{
-		PageUtility.switchTab(driver, null);
+		page_Utility.switchTab(driver, null);
 	}
 	public int noOfColumns()
 	{
-		PageUtility.windowHandling(driver);
+		page_Utility.windowHandling(driver);
 		List<WebElement> rows = countofColumnHeadings;
 		System.out.println(rows.size());// assertion
 		
@@ -195,6 +195,6 @@ public class QALegend_ClientPage
 	}
 	public void switchParentTab()
 	{
-		PageUtility.switchWindowToParentTab(driver);
+		page_Utility.switchWindowToParentTab(driver);
 	}
 }

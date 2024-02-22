@@ -12,35 +12,35 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class WaitUtility 
 {
 	
-	public static void waitForAnElementToBeClickable(WebDriver driver,WebElement element)
+	public void waitForAnElementToBeClickable(WebDriver driver,WebElement element)
 	{
 		WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(4));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 	
-	public static void waitFowaitForAnElementToBeVisible(WebDriver driver,WebElement element)
+	public void waitFowaitForAnElementToBeVisible(WebDriver driver,WebElement element)
 	{
 		WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(3));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-  public static void waitForAFrame(WebDriver driver,WebElement element)
+  public void waitForAFrame(WebDriver driver,WebElement element)
   { 
 	  WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(3));
 	  wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
 	  
   }
-  public static void waitTillAlertDisplays(WebDriver driver, Duration timeinseconds)
+  public void waitTillAlertDisplays(WebDriver driver, Duration timeinseconds)
   {
   	WebDriverWait wait= new WebDriverWait(driver, timeinseconds);
   	wait.until(ExpectedConditions.alertIsPresent());
   }
  
-  public static void waitTillElementSelected(WebDriver driver,WebElement element, Duration timeinseconds)
+  public void waitTillElementSelected(WebDriver driver,WebElement element, Duration timeinseconds)
   {
   	WebDriverWait wait= new WebDriverWait(driver, timeinseconds);
   	wait.until(ExpectedConditions.elementToBeSelected(element));
   }
-  public static void waitTillvisibilityOfElementLocated(WebDriver driver,By Byelement, Duration timeinseconds)
+  public void waitTillvisibilityOfElementLocated(WebDriver driver,By Byelement, Duration timeinseconds)
   {
   	WebDriverWait wait= new WebDriverWait(driver, timeinseconds);
   wait.until(ExpectedConditions.visibilityOfElementLocated(Byelement));

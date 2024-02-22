@@ -11,13 +11,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtility;
+import Utilities.WaitUtility;
 
 
 
 public class QALegend_LoginPage 
 {
 WebDriver driver;
-
+PageUtility page_Utility = new PageUtility();
+WaitUtility wait_Utility =new WaitUtility();
 
 @FindBy(name = "email")
 WebElement userNamefield;
@@ -38,7 +40,11 @@ public QALegend_LoginPage(WebDriver driver)
 	this.driver=driver;
 	PageFactory.initElements(driver, this); 
 }
-
+public void logInToTheApplication(String username, String password) {
+	enterUserName(username);
+	enterPassword(password);
+	loginButton();
+}
 public String errorMessage()
 {
 	return emailError.getText();
@@ -48,31 +54,31 @@ public String errorMessage()
 
 public void enterUserName(String username)
 {
-	PageUtility.enterText(userNamefield, username);
+	userNamefield.sendKeys(username);
 }
 public void enterPassword(String password)
 {
-	PageUtility.enterText(passWordField, password);
+	passWordField.sendKeys(password);
 }
 public void loginButton()
 {
-	PageUtility.clickOnElement(signInButton);
+    signInButton.click();
 }
 
 public void loginScenario(String username, String password)
 {
-	PageUtility.enterText(userNamefield, username);
-	PageUtility.enterText(passWordField, password);
-	PageUtility.clickOnElement(signInButton);
+	userNamefield.sendKeys(username);
+	passWordField.sendKeys(password);
+	signInButton.click();
 
 }
 public String getLogInPageTitle()
 {
-	return PageUtility.getTextFromElement(signInTitle);
+	return page_Utility.getTextFromElement(signInTitle);
 }
 public boolean displaylogInPageTitle()
 {
-	return PageUtility.isElementDisplayed(signInTitle);
+	return page_Utility.isElementDisplayed(signInTitle);
 }
 
 }

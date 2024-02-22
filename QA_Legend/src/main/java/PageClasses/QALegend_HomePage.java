@@ -6,10 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtility;
+import Utilities.WaitUtility;
 
 public class QALegend_HomePage 
 {
 WebDriver driver;
+PageUtility page_Utility = new PageUtility();
+WaitUtility wait_Utility =new WaitUtility();
 
 @FindBy (xpath = "//span[@class='topbar-user-name']")
 WebElement userProfileName;
@@ -70,42 +73,42 @@ public QALegend_HomePage(WebDriver driver)
 
 public void logOut()
 {
-  PageUtility.clickOnElement(userProfileName);
-  PageUtility.clickOnElement(signOutUser);
+  userProfileName.click();
+  signOutUser.click();
 }
 public String signInUrl()
 {
-	return PageUtility.getUrlOfThePage(driver);
+	return page_Utility.getUrlOfThePage(driver);
 }
 public String getUserProfileName()
 {
-String userName= PageUtility.getTextFromElement(userProfileName);
+String userName= page_Utility.getTextFromElement(userProfileName);
 return userName;
 }
 public void clickOnEvents() 
 {
-	PageUtility.clickOnElement(eventsButton);
+ eventsButton.click();
 }
 
 public void clickOnClients() 
 {
-	PageUtility.clickOnElement(ClientsButton);
+ ClientsButton.click();
 }
 public void clickOnMessage()
 {
-	PageUtility.clickOnElement(messagesButton);
+	messagesButton.click();
 }
 public void clickOnProjects()
 {
-	PageUtility.clickOnElement(projectsButton);
+ projectsButton.click();
 }
 public void clickOnAllProjects()
 {
-	PageUtility.clickOnElement(allProjectsButton);
+	allProjectsButton.click();
 }
 public void clickOnTeamMembers() 
 {
-	PageUtility.clickOnElement(teamMemberButton);
+	teamMemberButton.click();
 }
 
 public String noOfTickets()
@@ -114,18 +117,18 @@ public String noOfTickets()
 }
 public void clickOnTickets()
 {
-	PageUtility.clickOnElement(ticketsButton);
+	ticketsButton.click();
 }
 public void plotTicketsPieChart()
 {
-	PageUtility.scrollThePage(locateTicketsPieChart, driver);
+	page_Utility.scrollThePage(locateTicketsPieChart, driver);
 }
 public void clickOnLeave()
 {
-	PageUtility.clickOnElement(leaveButton);
+	leaveButton.click();
 }
 public String getUrl()
 {
-	return PageUtility.getUrlOfThePage(driver);
+	return page_Utility.getUrlOfThePage(driver);
 }
 }

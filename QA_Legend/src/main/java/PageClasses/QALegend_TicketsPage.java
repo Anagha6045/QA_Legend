@@ -9,10 +9,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtility;
+import Utilities.WaitUtility;
 
 public class QALegend_TicketsPage 
 {
 	WebDriver driver;
+	PageUtility page_Utility = new PageUtility();
+	WaitUtility wait_Utility =new WaitUtility();
 	
 	@FindBy(xpath = "//span[text()='Print']")
 	WebElement buttonPrint;
@@ -63,69 +66,67 @@ public class QALegend_TicketsPage
 
 	public void input_AddTicket()
 	{
-		PageUtility.clickOnElement(addNewTicket);
+		addNewTicket.click();
 	}
 	
 	public void input_Title(String title)
 	{
-		PageUtility.enterText(input_FieldTitle,title);
+	    input_FieldTitle.sendKeys(title);
 	}
 
 	
 	public void input_Description(String description)
 	{
-		PageUtility.enterText(input_Description,description);
+		input_Description.sendKeys(description);
 	}
 	public void clickOnPrint()
 	{
-		PageUtility.clickOnElement(buttonPrint);
+	    buttonPrint.click();
 	}
 	
 	public void inputClient()
 	{
-		PageUtility.clickOnElement(dropdownIcon);
+		dropdownIcon.click();
 	}
 	public void selectFromDropDown(String company) throws AWTException
 	{
-		PageUtility.clickByJavaScript(selectDropDown,driver);
-		PageUtility.scrollThePage(inputSearch_Client, driver);
-		PageUtility.clickByJavaScript(inputSearch_Client,driver);
-		PageUtility.robotSearchClient();
+		page_Utility.clickByJavaScript(selectDropDown,driver);
+		page_Utility.scrollThePage(inputSearch_Client, driver);
+		page_Utility.clickByJavaScript(inputSearch_Client,driver);
+		page_Utility.robotSearchClient();
 	}
 	public String countTheNoOfTickets()
 	{
-		PageUtility.windowHandling(driver);
-		//List<Integer> rowSizes = new ArrayList<>();
+		page_Utility.windowHandling(driver);
 		List<WebElement> rows = noOfTickets; // Assuming rows are within a <tbody>
 		System.out.println(rows.size());// assertion
-		
-		  return String.valueOf(rows.size()-1);
+	    return String.valueOf(rows.size()-1);
 		
 		
 	}
 	public void switchParentTab()
 	{
-		PageUtility.switchWindowToParentTab(driver);
+		page_Utility.switchWindowToParentTab(driver);
 	}
 	public void clickOnSave()
 	{
-		PageUtility.clickOnElement(clickOnSave);
+		clickOnSave.click();
 	}
     
 	public void clickOnCancel()
 	{
-		PageUtility.clickOnElement(clickOnCancel);
+		clickOnCancel.click();
 	}
 	public void clickOnFirstTicket()
 	{
-		PageUtility.clickOnElement(hyperlinkTicketTitle);
+		hyperlinkTicketTitle.click();
 	}
 	public boolean visibilityActionButton()
 	{
-		return PageUtility.isElementDisplayed(actionButtonOnOpenedTicketPage);
+		return page_Utility.isElementDisplayed(actionButtonOnOpenedTicketPage);
 	}
 	public boolean enabledActionButton()
 	{
-		return PageUtility.isElementEnabled(actionButtonOnOpenedTicketPage);
+		return page_Utility.isElementEnabled(actionButtonOnOpenedTicketPage);
 	}
 }
