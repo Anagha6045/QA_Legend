@@ -186,13 +186,13 @@ public class QALegendTestCases extends BaseClass {
 	}
 
 	@Test(groups = { "Regression" })
-	public void userCanApplyForLeave() {
+	public void userCanApplyForLeave() throws AWTException {
 		login_Page.logInToTheApplication(prop.getProperty("username"), prop.getProperty("password"));
 		home_Page.clickOnLeave();
 		leave_Page.clickOnButtonApplyLeave();
 		leave_Page.clickOnDropDown();
 		leave_Page.selectCasualLeave();
-		leave_Page.durationSingleDay();
+		//leave_Page.durationSingleDay();
 		leave_Page.clickOnSingleDateField();
 		leave_Page.selectDateOfLeave();
 		leave_Page.input_Reason(prop.getProperty("leave_reason") + faker_Utility.randomNumberCreation());

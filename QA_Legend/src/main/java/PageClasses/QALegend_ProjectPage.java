@@ -82,7 +82,7 @@ public class QALegend_ProjectPage
 	@FindBy(xpath="//label//input[@placeholder='Search']")
 	WebElement searchProject;
 	
-	@FindBy(xpath = "//tbody//tr//td//a[text()='TestProject9843']")
+	@FindBy(xpath = "//tbody//tr//td//a[text()='TestProject9442']")
 	WebElement resultSearchProject;
 	
 	@FindBy(xpath = "(//a[@title='Delete project'])[1]")

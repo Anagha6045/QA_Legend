@@ -371,4 +371,18 @@ public void scrollToBottom(WebDriver driver, int percentScroll)
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
     }
+    public void selectLeave() throws AWTException
+    {
+    	Robot robot= new Robot();
+    	robot.keyPress(KeyEvent.VK_C);
+		robot.keyRelease(KeyEvent.VK_C);
+		robot.keyPress(KeyEvent.VK_A);
+		robot.keyRelease(KeyEvent.VK_A);
+		robot.keyPress(KeyEvent.VK_S);
+		robot.keyRelease(KeyEvent.VK_S);
+		robot.keyPress(KeyEvent.VK_U);
+		robot.keyRelease(KeyEvent.VK_U);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+    }
 }

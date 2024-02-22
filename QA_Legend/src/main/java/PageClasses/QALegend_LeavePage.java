@@ -1,5 +1,7 @@
 package PageClasses;
 
+import java.awt.AWTException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -80,12 +82,14 @@ public class QALegend_LeavePage
 	public void clickOnDropDown()
 	{
 		wait_Utility.waitForAnElementToBeClickable(driver, clickDropDown);
-		clickDropDown.click();
+		page_Utility.clickByJavaScript(clickDropDown,driver);
+		
 	}
-	public void selectCasualLeave()
+	public void selectCasualLeave() throws AWTException
 	{
 		page_Utility.clickByJavaScript(leave_Field, driver);
-	    select_CasualLeave.click();
+		page_Utility.selectLeave();
+		//page_Utility.clickByJavaScript(select_CasualLeave, driver);
 	}
 	public void selectLeaveFromDropDown()
 	{

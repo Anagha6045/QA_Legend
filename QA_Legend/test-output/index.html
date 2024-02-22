@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,12 +50,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\anagh\git\QA_Legend\QA_Legend\testng_CrossBrowser.xml</span>
+                    <span>C:\Users\anagh\git\QA_Legend\QA_Legend\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,26 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">12 methods, 2 failed,   10 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.QALegendTestCases" class="method navigator-link" hash-for-method="isAddedProjectViewable">isAddedProjectViewable</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.QALegendTestCases" class="method navigator-link" hash-for-method="isEventAdded">isEventAdded</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">12 methods,   12 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -133,6 +114,16 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="TestCases.QALegendTestCases" class="method navigator-link" hash-for-method="isAddedNotesDisplayed">isAddedNotesDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.QALegendTestCases" class="method navigator-link" hash-for-method="isAddedProjectViewable">isAddedProjectViewable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.QALegendTestCases" class="method navigator-link" hash-for-method="isEventAdded">isEventAdded</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -182,85 +173,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">TestCases.QALegendTestCases</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="isAddedProjectViewable">
-                  </a> <!-- isAddedProjectViewable -->
-                  <span class="method-name">isAddedProjectViewable</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tbody//tr//td//a[text()=&apos;TestProject9843&apos;]&quot;}
-  (Session info: MicrosoftEdge=121.0.2277.128)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [da34dff82e9b2a50cdbdea1ddfe8f76e, findElement {using=xpath, value=//tbody//tr//td//a[text()=&apos;TestProject9843&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 121.0.2277.128, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53684}, msedge: {msedgedriverVersion: 121.0.2277.128 (33d347b6876..., userDataDir: C:\Users\anagh\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53684/devtoo..., se:cdpVersion: 121.0.2277.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: da34dff82e9b2a50cdbdea1ddfe8f76e
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
-	at PageClasses.QALegend_ProjectPage.addedProjectDisplayed(QALegend_ProjectPage.java:185)
-	at TestCases.QALegendTestCases.isAddedProjectViewable(QALegendTestCases.java:217)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 28 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="isEventAdded">
-                  </a> <!-- isEventAdded -->
-                  <span class="method-name">isEventAdded</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#title&quot;}
-  (Session info: chrome=122.0.6261.57)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ac01c7065857542aa41f584504494005, findElement {using=id, value=title}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.57, chrome: {chromedriverVersion: 122.0.6261.57 (87957e464700..., userDataDir: C:\Users\anagh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53469}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53469/devtoo..., se:cdpVersion: 122.0.6261.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ac01c7065857542aa41f584504494005
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.sendKeys(Unknown Source)
-	at Utilities.PageUtility.enterText(PageUtility.java:76)
-	at PageClasses.QALegend_EventPage.inputTitle(QALegend_EventPage.java:100)
-	at TestCases.QALegendTestCases.isEventAdded(QALegendTestCases.java:99)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 28 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -286,6 +198,20 @@ Session ID: ac01c7065857542aa41f584504494005
                   <a name="isAddedNotesDisplayed">
                   </a> <!-- isAddedNotesDisplayed -->
                   <span class="method-name">isAddedNotesDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="isAddedProjectViewable">
+                  </a> <!-- isAddedProjectViewable -->
+                  <span class="method-name">isAddedProjectViewable</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="isEventAdded">
+                  </a> <!-- isEventAdded -->
+                  <span class="method-name">isEventAdded</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -345,7 +271,7 @@ Session ID: ac01c7065857542aa41f584504494005
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\anagh\git\QA_Legend\QA_Legend\testng_CrossBrowser.xml</span>
+            <span class="header-content">C:\Users\anagh\git\QA_Legend\QA_Legend\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -355,7 +281,7 @@ Session ID: ac01c7065857542aa41f584504494005
   &lt;listeners&gt;
     &lt;listener class-name=&quot;TestCases.Listeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test_Chrome&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;parameter name=&quot;Browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestCases.QALegendTestCases&quot;&gt;
@@ -365,15 +291,6 @@ Session ID: ac01c7065857542aa41f584504494005
           &lt;include name=&quot;downloadClientReport&quot;/&gt;
           &lt;include name=&quot;sendEmail&quot;/&gt;
           &lt;include name=&quot;verifyNumberOfTickets&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- TestCases.QALegendTestCases --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test_Chrome --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test_Edge&quot;&gt;
-    &lt;parameter name=&quot;Browser&quot; value=&quot;Edge&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;TestCases.QALegendTestCases&quot;&gt;
-        &lt;methods&gt;
           &lt;include name=&quot;isAddedNotesDisplayed&quot;/&gt;
           &lt;include name=&quot;userCanApplyForLeave&quot;/&gt;
           &lt;include name=&quot;isAddedProjectViewable&quot;/&gt;
@@ -382,7 +299,7 @@ Session ID: ac01c7065857542aa41f584504494005
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- TestCases.QALegendTestCases --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test_Edge --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -394,10 +311,7 @@ Session ID: ac01c7065857542aa41f584504494005
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test_Chrome (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Test_Edge (1 class)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -473,58 +387,58 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(12);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyNumberOfTickets')
+data.setCell(0, 1, 'sendEmail')
 data.setCell(0, 2, 'TestCases.QALegendTestCases')
-data.setCell(0, 3, 32024);
+data.setCell(0, 3, 6670);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'sendEmail')
+data.setCell(1, 1, 'isEventAdded')
 data.setCell(1, 2, 'TestCases.QALegendTestCases')
-data.setCell(1, 3, 9173);
+data.setCell(1, 3, 5357);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'isAddedProjectViewable')
+data.setCell(2, 1, 'mandatoryFieldCheckClientCompany')
 data.setCell(2, 2, 'TestCases.QALegendTestCases')
-data.setCell(2, 3, 8136);
+data.setCell(2, 3, 4467);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'isEventAdded')
+data.setCell(3, 1, 'isAddedNotesDisplayed')
 data.setCell(3, 2, 'TestCases.QALegendTestCases')
-data.setCell(3, 3, 7405);
+data.setCell(3, 3, 3497);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'isAddedNotesDisplayed')
+data.setCell(4, 1, 'downloadClientReport')
 data.setCell(4, 2, 'TestCases.QALegendTestCases')
-data.setCell(4, 3, 5903);
+data.setCell(4, 3, 3313);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'canUseraddTickets')
 data.setCell(5, 2, 'TestCases.QALegendTestCases')
-data.setCell(5, 3, 4920);
+data.setCell(5, 3, 3184);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'mandatoryFieldCheckClientCompany')
+data.setCell(6, 1, 'isAddedProjectViewable')
 data.setCell(6, 2, 'TestCases.QALegendTestCases')
-data.setCell(6, 3, 4699);
+data.setCell(6, 3, 3038);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'downloadClientReport')
+data.setCell(7, 1, 'userCanApplyForLeave')
 data.setCell(7, 2, 'TestCases.QALegendTestCases')
-data.setCell(7, 3, 4294);
+data.setCell(7, 3, 2842);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'userCanApplyForLeave')
+data.setCell(8, 1, 'verifyNumberOfTickets')
 data.setCell(8, 2, 'TestCases.QALegendTestCases')
-data.setCell(8, 3, 4044);
+data.setCell(8, 3, 2402);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'loginCRMDataProvider')
 data.setCell(9, 2, 'TestCases.QALegendTestCases')
-data.setCell(9, 3, 1937);
+data.setCell(9, 3, 1084);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'loginCRMDataProvider')
 data.setCell(10, 2, 'TestCases.QALegendTestCases')
-data.setCell(10, 3, 1627);
+data.setCell(10, 3, 666);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'loginCRMDataProvider')
 data.setCell(11, 2, 'TestCases.QALegendTestCases')
-data.setCell(11, 3, 1373);
+data.setCell(11, 3, 562);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 37 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -539,34 +453,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">10 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">TestCases.QALegendTestCases</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">canUseraddTickets</span>
-                <br/>
-                <span class="ignored-method-name">isAddedProjectViewable</span>
-                <br/>
-                <span class="ignored-method-name">isAddedNotesDisplayed</span>
-                <br/>
-                <span class="ignored-method-name">downloadClientReport</span>
-                <br/>
-                <span class="ignored-method-name">isEventAdded</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldCheckClientCompany</span>
-                <br/>
-                <span class="ignored-method-name">loginCRMDataProvider</span>
-                <br/>
-                <span class="ignored-method-name">sendEmail</span>
-                <br/>
-                <span class="ignored-method-name">userCanApplyForLeave</span>
-                <br/>
-                <span class="ignored-method-name">verifyNumberOfTickets</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -581,148 +470,144 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">isEventAdded</span>
-                <span class="method-start">9281 ms</span>
+                <span class="method-start">3550 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">17581 ms</span>
+                <span class="method-start">8920 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialization(Chrome)</span>
-                <span class="method-start">17955 ms</span>
+                <span class="method-start">9108 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">mandatoryFieldCheckClientCompany</span>
-                <span class="method-start">21802 ms</span>
+                <span class="method-start">12348 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">26508 ms</span>
+                <span class="method-start">16815 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialization(Chrome)</span>
-                <span class="method-start">26686 ms</span>
+                <span class="method-start">17010 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">downloadClientReport</span>
-                <span class="method-start">30357 ms</span>
+                <span class="method-start">20272 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">34654 ms</span>
+                <span class="method-start">23585 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialization(Chrome)</span>
-                <span class="method-start">34801 ms</span>
+                <span class="method-start">23735 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">sendEmail</span>
-                <span class="method-start">38281 ms</span>
+                <span class="method-start">26347 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">47457 ms</span>
+                <span class="method-start">33017 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initialization(Chrome)</span>
-                <span class="method-start">47684 ms</span>
+                <span class="method-start">33238 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyNumberOfTickets</span>
-                <span class="method-start">60917 ms</span>
+                <span class="method-start">35807 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">92941 ms</span>
+                <span class="method-start">38210 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">initialization(Edge)</span>
-                <span class="method-start">94221 ms</span>
+                <span class="method-name">initialization(Chrome)</span>
+                <span class="method-start">38408 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">isAddedNotesDisplayed</span>
-                <span class="method-start">101713 ms</span>
+                <span class="method-start">41354 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">107616 ms</span>
+                <span class="method-start">44854 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">initialization(Edge)</span>
-                <span class="method-start">107888 ms</span>
+                <span class="method-name">initialization(Chrome)</span>
+                <span class="method-start">45070 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">userCanApplyForLeave</span>
-                <span class="method-start">111586 ms</span>
+                <span class="method-start">48574 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">115630 ms</span>
+                <span class="method-start">51417 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">initialization(Edge)</span>
-                <span class="method-start">115806 ms</span>
+                <span class="method-name">initialization(Chrome)</span>
+                <span class="method-start">51612 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">isAddedProjectViewable</span>
-                <span class="method-start">120150 ms</span>
+                <span class="method-start">54155 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">128568 ms</span>
+                <span class="method-start">57194 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">initialization(Edge)</span>
-                <span class="method-start">128874 ms</span>
+                <span class="method-name">initialization(Chrome)</span>
+                <span class="method-start">57351 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">canUseraddTickets</span>
-                <span class="method-start">133159 ms</span>
+                <span class="method-start">59870 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">138079 ms</span>
+                <span class="method-start">63055 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">initialization(Edge)</span>
-                <span class="method-start">138634 ms</span>
+                <span class="method-name">initialization(Chrome)</span>
+                <span class="method-start">63361 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginCRMDataProvider(admin@admin.Com, 12345678)</span>
-                <span class="method-start">142863 ms</span>
+                <span class="method-start">65769 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">144800 ms</span>
+                <span class="method-start">66854 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">initialization(Edge)</span>
-                <span class="method-start">145020 ms</span>
+                <span class="method-name">initialization(Chrome)</span>
+                <span class="method-start">67016 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginCRMDataProvider(admin@admin.Com, 12345600)</span>
-                <span class="method-start">148441 ms</span>
+                <span class="method-start">69827 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">149814 ms</span>
+                <span class="method-start">70494 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">initialization(Edge)</span>
-                <span class="method-start">150037 ms</span>
+                <span class="method-name">initialization(Chrome)</span>
+                <span class="method-start">70641 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginCRMDataProvider(admin@adminInvalid.Com, 12345678)</span>
-                <span class="method-start">154382 ms</span>
+                <span class="method-start">73298 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">156023 ms</span>
+                <span class="method-start">73861 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
