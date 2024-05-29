@@ -51,6 +51,7 @@ public class BaseClass
 		
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+
 		return driver;
 
 	}
@@ -64,10 +65,9 @@ public class BaseClass
          String destinationFile=System.getProperty("user.dir")+"\\test-output\\"+testCaseName+".png";
          File destination= new File(destinationFile);
          FileUtils.copyFile(source, destination);
-        // org.openqa.selenium.io.FileHandler.copy(source, new File(destinattionFile));
          return destinationFile;
 		
-	  }
+	  }   
 		
 		 
 } 

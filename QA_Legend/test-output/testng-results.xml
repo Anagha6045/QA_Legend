@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="0" total="12" passed="11" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-22T19:42:42 IST" name="Suite" finished-at="2024-02-22T19:43:56 IST" duration-ms="74074">
+  <suite started-at="2024-04-11T19:31:28 IST" name="Suite" finished-at="2024-04-11T19:33:07 IST" duration-ms="98932">
     <groups>
       <group name="Regression">
-        <method signature="QALegendTestCases.userCanApplyForLeave()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" name="userCanApplyForLeave" class="TestCases.QALegendTestCases"/>
         <method signature="QALegendTestCases.verifyNumberOfTickets()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" name="verifyNumberOfTickets" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.userCanApplyForLeave()[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" name="userCanApplyForLeave" class="TestCases.QALegendTestCases"/>
       </group> <!-- Regression -->
       <group name="Smoke">
-        <method signature="QALegendTestCases.canUseraddTickets()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" name="canUseraddTickets" class="TestCases.QALegendTestCases"/>
         <method signature="QALegendTestCases.downloadClientReport()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" name="downloadClientReport" class="TestCases.QALegendTestCases"/>
-        <method signature="QALegendTestCases.isAddedNotesDisplayed()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" name="isAddedNotesDisplayed" class="TestCases.QALegendTestCases"/>
-        <method signature="QALegendTestCases.isAddedProjectViewable()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" name="isAddedProjectViewable" class="TestCases.QALegendTestCases"/>
         <method signature="QALegendTestCases.isEventAdded()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" name="isEventAdded" class="TestCases.QALegendTestCases"/>
         <method signature="QALegendTestCases.sendEmail()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" name="sendEmail" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.canUseraddTickets()[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" name="canUseraddTickets" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.isAddedNotesDisplayed()[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" name="isAddedNotesDisplayed" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.isAddedProjectViewable()[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" name="isAddedProjectViewable" class="TestCases.QALegendTestCases"/>
       </group> <!-- Smoke -->
       <group name="LoginScenario">
-        <method signature="QALegendTestCases.loginCRMDataProvider(java.lang.String,java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" name="loginCRMDataProvider" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.loginCRMDataProvider(java.lang.String,java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" name="loginCRMDataProvider" class="TestCases.QALegendTestCases"/>
       </group> <!-- LoginScenario -->
     </groups>
-    <test started-at="2024-02-22T19:42:42 IST" name="Test" finished-at="2024-02-22T19:43:56 IST" duration-ms="74074">
+    <test started-at="2024-04-11T19:31:28 IST" name="Test_Chrome" finished-at="2024-04-11T19:32:09 IST" duration-ms="40869">
       <class name="TestCases.QALegendTestCases">
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:42:42 IST" name="initialization" finished-at="2024-02-22T19:42:46 IST" duration-ms="3549" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-04-11T19:31:28 IST" name="initialization" finished-at="2024-04-11T19:31:32 IST" duration-ms="3729" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,15 +33,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="isEventAdded()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:42:46 IST" name="isEventAdded" finished-at="2024-02-22T19:42:51 IST" duration-ms="5357" status="PASS">
+        <test-method signature="isEventAdded()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-04-11T19:31:32 IST" name="isEventAdded" finished-at="2024-04-11T19:31:38 IST" duration-ms="5630" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isEventAdded -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:42:51 IST" name="tearDown" finished-at="2024-02-22T19:42:51 IST" duration-ms="184" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-04-11T19:31:38 IST" name="tearDown" finished-at="2024-04-11T19:31:38 IST" duration-ms="269" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:42:51 IST" name="initialization" finished-at="2024-02-22T19:42:55 IST" duration-ms="3240" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-04-11T19:31:38 IST" name="initialization" finished-at="2024-04-11T19:31:41 IST" duration-ms="3096" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -52,15 +52,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="mandatoryFieldCheckClientCompany()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:42:55 IST" name="mandatoryFieldCheckClientCompany" finished-at="2024-02-22T19:42:59 IST" duration-ms="4467" status="PASS">
+        <test-method signature="mandatoryFieldCheckClientCompany()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-04-11T19:31:41 IST" name="mandatoryFieldCheckClientCompany" finished-at="2024-04-11T19:31:45 IST" duration-ms="3625" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mandatoryFieldCheckClientCompany -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:42:59 IST" name="tearDown" finished-at="2024-02-22T19:42:59 IST" duration-ms="195" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-04-11T19:31:45 IST" name="tearDown" finished-at="2024-04-11T19:31:45 IST" duration-ms="168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:42:59 IST" name="initialization" finished-at="2024-02-22T19:43:03 IST" duration-ms="3262" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-04-11T19:31:45 IST" name="initialization" finished-at="2024-04-11T19:31:49 IST" duration-ms="3529" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -71,15 +71,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="downloadClientReport()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:03 IST" name="downloadClientReport" finished-at="2024-02-22T19:43:06 IST" duration-ms="3313" status="PASS">
+        <test-method signature="downloadClientReport()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-04-11T19:31:49 IST" name="downloadClientReport" finished-at="2024-04-11T19:31:52 IST" duration-ms="3173" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- downloadClientReport -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:06 IST" name="tearDown" finished-at="2024-02-22T19:43:06 IST" duration-ms="149" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-04-11T19:31:52 IST" name="tearDown" finished-at="2024-04-11T19:31:52 IST" duration-ms="142" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:06 IST" name="initialization" finished-at="2024-02-22T19:43:09 IST" duration-ms="2605" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-04-11T19:31:52 IST" name="initialization" finished-at="2024-04-11T19:31:55 IST" duration-ms="2643" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -90,15 +90,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="sendEmail()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:09 IST" name="sendEmail" finished-at="2024-02-22T19:43:15 IST" duration-ms="6670" status="PASS">
+        <test-method signature="sendEmail()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-04-11T19:31:55 IST" name="sendEmail" finished-at="2024-04-11T19:32:01 IST" duration-ms="6386" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendEmail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:15 IST" name="tearDown" finished-at="2024-02-22T19:43:15 IST" duration-ms="221" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-04-11T19:32:01 IST" name="tearDown" finished-at="2024-04-11T19:32:01 IST" duration-ms="208" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:15 IST" name="initialization" finished-at="2024-02-22T19:43:18 IST" duration-ms="2569" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-04-11T19:32:01 IST" name="initialization" finished-at="2024-04-11T19:32:04 IST" duration-ms="3223" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -109,102 +109,176 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="verifyNumberOfTickets()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:18 IST" name="verifyNumberOfTickets" finished-at="2024-02-22T19:43:20 IST" duration-ms="2402" status="PASS">
+        <test-method signature="verifyNumberOfTickets()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-04-11T19:32:04 IST" name="verifyNumberOfTickets" finished-at="2024-04-11T19:32:09 IST" duration-ms="4817" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNumberOfTickets -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:20 IST" name="tearDown" finished-at="2024-02-22T19:43:21 IST" duration-ms="197" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-04-11T19:32:09 IST" name="tearDown" finished-at="2024-04-11T19:32:09 IST" duration-ms="153" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:21 IST" name="initialization" finished-at="2024-02-22T19:43:24 IST" duration-ms="2945" status="PASS">
+      </class> <!-- TestCases.QALegendTestCases -->
+    </test> <!-- Test_Chrome -->
+    <test started-at="2024-04-11T19:32:10 IST" name="Test_Edge" finished-at="2024-04-11T19:33:07 IST" duration-ms="57742">
+      <class name="TestCases.QALegendTestCases">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:32:10 IST" name="initialization" finished-at="2024-04-11T19:32:22 IST" duration-ms="12680" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[Edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="isAddedNotesDisplayed()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:24 IST" name="isAddedNotesDisplayed" finished-at="2024-02-22T19:43:27 IST" duration-ms="3497" status="PASS">
+        <test-method signature="isAddedNotesDisplayed()[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:32:22 IST" name="isAddedNotesDisplayed" finished-at="2024-04-11T19:32:26 IST" duration-ms="3801" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isAddedNotesDisplayed -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:27 IST" name="tearDown" finished-at="2024-02-22T19:43:27 IST" duration-ms="214" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:32:26 IST" name="tearDown" finished-at="2024-04-11T19:32:26 IST" duration-ms="332" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:27 IST" name="initialization" finished-at="2024-02-22T19:43:31 IST" duration-ms="3504" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:32:26 IST" name="initialization" finished-at="2024-04-11T19:32:31 IST" duration-ms="4219" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[Edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="userCanApplyForLeave()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:31 IST" name="userCanApplyForLeave" finished-at="2024-02-22T19:43:34 IST" duration-ms="2842" status="PASS">
+        <test-method signature="userCanApplyForLeave()[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:32:31 IST" name="userCanApplyForLeave" finished-at="2024-04-11T19:32:34 IST" duration-ms="3393" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userCanApplyForLeave -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:34 IST" name="tearDown" finished-at="2024-02-22T19:43:34 IST" duration-ms="194" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:32:34 IST" name="tearDown" finished-at="2024-04-11T19:32:34 IST" duration-ms="197" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:34 IST" name="initialization" finished-at="2024-02-22T19:43:36 IST" duration-ms="2543" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:32:34 IST" name="initialization" finished-at="2024-04-11T19:32:38 IST" duration-ms="3455" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[Edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="isAddedProjectViewable()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:36 IST" name="isAddedProjectViewable" finished-at="2024-02-22T19:43:39 IST" duration-ms="3038" status="PASS">
+        <test-method signature="isAddedProjectViewable()[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:32:38 IST" name="isAddedProjectViewable" finished-at="2024-04-11T19:32:45 IST" duration-ms="6955" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//tbody//tr//td//a[text()='TestProject9442']"}
+  (Session info: MicrosoftEdge=123.0.2420.81)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [8b79fd32e05495017561d7518892d16a, findElement {using=xpath, value=//tbody//tr//td//a[text()='TestProject9442']}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.81, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:49261}, msedge: {msedgedriverVersion: 123.0.2420.81 (8acdca46cf48..., userDataDir: C:\Users\anagh\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49261/devtoo..., se:cdpVersion: 123.0.2420.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8b79fd32e05495017561d7518892d16a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//tbody//tr//td//a[text()='TestProject9442']"}
+  (Session info: MicrosoftEdge=123.0.2420.81)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [8b79fd32e05495017561d7518892d16a, findElement {using=xpath, value=//tbody//tr//td//a[text()='TestProject9442']}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.81, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:49261}, msedge: {msedgedriverVersion: 123.0.2420.81 (8acdca46cf48..., userDataDir: C:\Users\anagh\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49261/devtoo..., se:cdpVersion: 123.0.2420.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8b79fd32e05495017561d7518892d16a
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+at PageClasses.QALegend_ProjectPage.addedProjectDisplayed(QALegend_ProjectPage.java:185)
+at TestCases.QALegendTestCases.isAddedProjectViewable(QALegendTestCases.java:216)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isAddedProjectViewable -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:39 IST" name="tearDown" finished-at="2024-02-22T19:43:40 IST" duration-ms="156" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:32:45 IST" name="tearDown" finished-at="2024-04-11T19:32:45 IST" duration-ms="322" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:40 IST" name="initialization" finished-at="2024-02-22T19:43:42 IST" duration-ms="2519" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:32:45 IST" name="initialization" finished-at="2024-04-11T19:32:49 IST" duration-ms="3527" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[Edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="canUseraddTickets()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:42 IST" name="canUseraddTickets" finished-at="2024-02-22T19:43:45 IST" duration-ms="3184" status="PASS">
+        <test-method signature="canUseraddTickets()[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:32:49 IST" name="canUseraddTickets" finished-at="2024-04-11T19:32:53 IST" duration-ms="3987" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- canUseraddTickets -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:45 IST" name="tearDown" finished-at="2024-02-22T19:43:45 IST" duration-ms="149" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:32:53 IST" name="tearDown" finished-at="2024-04-11T19:32:53 IST" duration-ms="224" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:46 IST" name="initialization" finished-at="2024-02-22T19:43:48 IST" duration-ms="2408" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:32:53 IST" name="initialization" finished-at="2024-04-11T19:32:56 IST" duration-ms="3176" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[Edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="loginCRMDataProvider(java.lang.String,java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:48 IST" name="loginCRMDataProvider" data-provider="login_Details" finished-at="2024-02-22T19:43:49 IST" duration-ms="1084" status="PASS">
+        <test-method signature="loginCRMDataProvider(java.lang.String,java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:32:56 IST" name="loginCRMDataProvider" data-provider="login_Details" finished-at="2024-04-11T19:32:58 IST" duration-ms="1751" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -220,22 +294,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginCRMDataProvider -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:49 IST" name="tearDown" finished-at="2024-02-22T19:43:49 IST" duration-ms="161" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:32:58 IST" name="tearDown" finished-at="2024-04-11T19:32:58 IST" duration-ms="194" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:49 IST" name="initialization" finished-at="2024-02-22T19:43:52 IST" duration-ms="2811" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:32:58 IST" name="initialization" finished-at="2024-04-11T19:33:02 IST" duration-ms="3545" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[Edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="loginCRMDataProvider(java.lang.String,java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:52 IST" name="loginCRMDataProvider" data-provider="login_Details" finished-at="2024-02-22T19:43:53 IST" duration-ms="666" status="PASS">
+        <test-method signature="loginCRMDataProvider(java.lang.String,java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:33:02 IST" name="loginCRMDataProvider" data-provider="login_Details" finished-at="2024-04-11T19:33:03 IST" duration-ms="600" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -251,22 +325,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginCRMDataProvider -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:53 IST" name="tearDown" finished-at="2024-02-22T19:43:53 IST" duration-ms="146" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:33:03 IST" name="tearDown" finished-at="2024-04-11T19:33:03 IST" duration-ms="222" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:53 IST" name="initialization" finished-at="2024-02-22T19:43:56 IST" duration-ms="2656" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:33:03 IST" name="initialization" finished-at="2024-04-11T19:33:06 IST" duration-ms="3665" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[Edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="loginCRMDataProvider(java.lang.String,java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:56 IST" name="loginCRMDataProvider" data-provider="login_Details" finished-at="2024-02-22T19:43:56 IST" duration-ms="562" status="PASS">
+        <test-method signature="loginCRMDataProvider(java.lang.String,java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:33:06 IST" name="loginCRMDataProvider" data-provider="login_Details" finished-at="2024-04-11T19:33:07 IST" duration-ms="686" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -282,11 +356,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginCRMDataProvider -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@6340e5f0]" started-at="2024-02-22T19:43:56 IST" name="tearDown" finished-at="2024-02-22T19:43:56 IST" duration-ms="167" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@68c9133c]" started-at="2024-04-11T19:33:07 IST" name="tearDown" finished-at="2024-04-11T19:33:07 IST" duration-ms="210" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestCases.QALegendTestCases -->
-    </test> <!-- Test -->
+    </test> <!-- Test_Edge -->
   </suite> <!-- Suite -->
 </testng-results>

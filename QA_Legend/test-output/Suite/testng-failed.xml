@@ -4,16 +4,16 @@
   <listeners>
     <listener class-name="TestCases.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
-    <parameter name="Browser" value="Chrome"/>
+  <test thread-count="5" name="Test_Edge(failed)">
+    <parameter name="Browser" value="Edge"/>
     <classes>
       <class name="TestCases.QALegendTestCases">
         <methods>
           <include name="initialization"/>
           <include name="tearDown"/>
-          <include name="userCanApplyForLeave"/>
+          <include name="isAddedProjectViewable"/>
         </methods>
       </class> <!-- TestCases.QALegendTestCases -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test_Edge(failed) -->
 </suite> <!-- Failed suite [Suite] -->

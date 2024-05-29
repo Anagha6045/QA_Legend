@@ -39,6 +39,7 @@ public QALegend_LoginPage(WebDriver driver)
 	// TODO Auto-generated constructor stub
 	this.driver=driver;
 	PageFactory.initElements(driver, this); 
+	
 }
 public void logInToTheApplication(String username, String password) {
 	enterUserName(username);

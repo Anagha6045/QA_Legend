@@ -49,7 +49,7 @@ public class QALegend_EventPage
 	@FindBy(xpath = "//div[@class='fc-event-container']//a[last()]")
 	WebElement startDateGridline;
 	
-	@FindBy(xpath = "//h4[text()='Demo CRM']")
+	@FindBy(xpath = "//h4[text()='Event details']")
 	WebElement eventTitlefromPage;
 	
 	@FindBy(id = "//input[starts-with(@id,'s2id')][1]")

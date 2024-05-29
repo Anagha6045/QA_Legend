@@ -42,7 +42,7 @@ public class QALegendTestCases extends BaseClass {
 	QALegend_NotePage note_Page;
 	ExcelUtility excel_Utility;
 	FakerUtility faker_Utility;
-	
+
 	@BeforeMethod(alwaysRun = true)
 	@Parameters({ "Browser" })
 	public void initialization(String browser) throws Exception {
@@ -69,7 +69,7 @@ public class QALegendTestCases extends BaseClass {
 
 	}
 
-	@Test( dataProvider = "login_Details" ,groups = { "LoginScenario" })
+	@Test(dataProvider = "login_Details", groups = { "LoginScenario" })
 	public void loginCRMDataProvider(String userName, String passWord) {
 
 		login_Page.enterUserName(userName);
@@ -86,7 +86,7 @@ public class QALegendTestCases extends BaseClass {
 
 	}
 
-	@Test(groups = { "Smoke" })
+	@Test(groups = { "Smoke" } )
 	public void isEventAdded() throws IOException {
 		String event_Title = excel_Utility.getString(1, 0, excelFilePath, "Events")
 				+ faker_Utility.randomNumberCreation();
@@ -104,12 +104,12 @@ public class QALegendTestCases extends BaseClass {
 		event_Page.selectEndDate();
 		event_Page.inputLocation(excel_Utility.getString(1, 4, excelFilePath, "Events"));
 		event_Page.clickOnSave();
-		/*
-		 * event_Page.clickOnDayButton(); event_Page.clickOnEventGrid();
-		 * event_Page.getEventTitle();
-		 * 
-		 * Assert.assertEquals(event_Page.getEventTitle(), true);
-		 */
+		event_Page.clickOnDayButton();
+		event_Page.clickOnEventGrid();
+		event_Page.getEventTitle();
+
+		Assert.assertEquals(event_Page.getEventTitle(), true);
+
 	}
 
 	@Test(retryAnalyzer = Rerun_FailedTestcases.class)
@@ -192,7 +192,6 @@ public class QALegendTestCases extends BaseClass {
 		leave_Page.clickOnButtonApplyLeave();
 		leave_Page.clickOnDropDown();
 		leave_Page.selectCasualLeave();
-		//leave_Page.durationSingleDay();
 		leave_Page.clickOnSingleDateField();
 		leave_Page.selectDateOfLeave();
 		leave_Page.input_Reason(prop.getProperty("leave_reason") + faker_Utility.randomNumberCreation());

@@ -75,7 +75,7 @@ public void enterText(WebElement element, String value)
 {
 	element.sendKeys(value);
 }
-public void enterNumber(WebElement element, CharSequence[] value)
+public void enterNumber(WebElement element,  CharSequence[] value)
 {
 	element.sendKeys(value);
 	
